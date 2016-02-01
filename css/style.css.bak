@@ -21,7 +21,7 @@ h1 {float:left;padding:114px 0 0 63px}
 p {padding-bottom:20px}
 /*  header  */
 header {height:266px;width:100%;overflow:hidden}
-#logo {display:block;width:319px;height:86px;font-size: 26px;text-decoration: none;}
+#logo {display:block;background:url(../images/logo.png) no-repeat;width:319px;height:86px;text-indent:-9999px}
 #menu {}
 #menu li {}
 #menu li a{}

@@ -42,7 +42,7 @@
 					<div class="kwiks_wrap">
 						<ul class="kwicks horizontal">
 							<li id="page_1">
-								<div class="text">个人简历</div>
+								<div class="text">&nbsp;&nbsp;&nbsp;个人简历</div>
 								<div class="cont">
 									<p class="pad_top1">
 										<strong>Business.Co</strong> is one of <a href="http://blog.templatemonster.com/free-website-templates/" target="_blank">free website templates</a> created by TemplateMonster.com team. This website template is optimized for 1024X768 screen resolution. It is also XHTML & CSS valid.
@@ -59,7 +59,7 @@
 								</div>
 							</li>
 							<li id="page_2">
-								<div class="text">参与的项目</div>
+								<div class="text">&nbsp;&nbsp;&nbsp;参与的项目</div>
 								<div class="cont">
 									<div class="wrapper">
 										<figure class="left marg_right1"><a href="#"><img src="images/page2_img1.jpg" alt=""></a></figure>
@@ -85,7 +85,7 @@
 								</div>
 							</li>
 							<li id="page_3">
-								<div class="text">学习记录</div>
+								<div class="text">&nbsp;&nbsp;&nbsp;学习记录</div>
 								<div class="cont">
 									<div class="wrapper">
 										<article class="cols">
@@ -124,7 +124,7 @@
 								</div>
 							</li>
 							<li id="page_4">
-								<div class="text">书籍收藏</div>
+								<div class="text">&nbsp;&nbsp;&nbsp;书籍收藏</div>
 								<div class="cont">
 									<div class="wrapper pad_top1">
 										<article class="cols">
@@ -152,7 +152,7 @@
 								</div>
 							</li>
 							<li id="page_5">
-								<div class="text">娱乐</div>
+								<div class="text">&nbsp;&nbsp;&nbsp;娱乐</div>
 								<div class="cont">
 									<div class="wrapper pad_top1">
 										<article class="cols">
