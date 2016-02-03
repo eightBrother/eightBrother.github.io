@@ -102,7 +102,7 @@
 
 					<div style="width: 699px;height: 450px;border: 1px solid #E2E2E2;
     float: left; margin-left: 20px; margin-top: 5px;border-radius: 15px;">
-							<iframe id ="detail"src="" style="width:100%;height:100%">
+							<iframe id ="detail"src="">
 							 
 							</iframe>
 					</div>
