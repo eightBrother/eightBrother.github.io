@@ -4,7 +4,7 @@
 .fcenter {float:none;margin:0 auto;text-align:center}
 .fclear {clear:both}
 body {margin:0;font-size:13px;font-family:arial;color:#3F3F3F;background:#CBCBC6}
-.outer {width:963px;background:#fff}
+.outer {width:100%;background:#fff}
 .name {font-size:35px;color:#9B0033;padding-left:15px;height:70px}
 .name2 {color:#3F3F3F}
 .tag {font-size:18px;color:#CD3164;padding-left:167px}
@@ -14,7 +14,7 @@ body {margin:0;font-size:13px;font-family:arial;color:#3F3F3F;background:#CBCBC6
 .toplinks a {text-decoration:none;color:#fff}
 .toplinks a:hover {text-decoration:none;color:#383838}
 .sap {width:1px;color:#fff}
-#left {float:left;width:200px;background:#F6F5F5;border:1px solid #E2E2E2}
+#left {float:left;width:20%;background:#F6F5F5;border:1px solid #E2E2E2}
 .leftlinks {line-height:25px;font-family:tahoma;font-size:11px}
 .leftlinks a {text-decoration:none;color:#363C49;display:block;padding-left:13px;border-bottom:1px solid #E7E6E6}
 .leftlinks a:hover {text-decoration:none;color:#000;background:#F2F2F0}
