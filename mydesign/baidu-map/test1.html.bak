@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=CG5uq1hOpTppXvwHCMS2uqNI"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.js"></script>
+<link rel="stylesheet" href="http://api.map.baidu.com/library/SearchInfoWindow/1.5/src/SearchInfoWindow_min.css" />
+
+ </head>
+ <body>
+   <div id="l-map" style="width:100%;height:700px;background-color:#eee;padding:0;"></div>
+   <script>
+
+  // 百度地图API功能
+  var  address ="";
+  var map = new BMap.Map("l-map");            // 创建Map实例
+  var poi = new BMap.Point(116.307852,40.057031);
+  var top_left_navigation = new BMap.NavigationControl();                
+			var myCity = new BMap.LocalCity();
+			myCity.get(myFun);
+   function myFun(result){
+				var cityName = result.name;
+			//	map.setCenter(cityName);
+				address = cityName;
+			//	alert("当前定位城市:"+cityName);
+				map.centerAndZoom(address, 13);
+			  	map.enableScrollWheelZoom();
+			  	map.addControl(top_left_navigation); 
+			  	//请求gmall返回地址数组
+			 // 	var addrArray = getAddrArray(address); 
+				var myGeo = new BMap.Geocoder();
+				myGeo.getPoint(address, function(point){
+// 					var marker = new BMap.Marker(new BMap.Point(point.lng, point.lat)); 
+// 					map.addOverlay(marker);
+						var local = new BMap.LocalSearch(map, {
+							renderOptions:{map: map, autoViewport:false},
+							pageCapacity:10
+						});
+		             local.searchNearby(address,"餐馆","饭店");
+		             local.setSearchCompleteCallback(function(e){ 
+		            	 for(var i=0; i<local.getResults().getCurrentNumPois(); i++){ 
+		            	 local.getResults().getPoi(i).detailUrl="";
+		            	 };
+		             }) 
+		             local.setMarkersSetCallback(function(){ 
+		            	 $(".BMap_bubble_title >a").remove();
+		             })
+				}, address);
+			}
+		
+</script>
+ </body>
+</html>
