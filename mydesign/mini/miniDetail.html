@@ -1,0 +1,314 @@
+
+<!-- saved from url=(0049)http://s1.mi.com/m/product/minote/index.html?0629 -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>商品详情</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1,maximum-scale=1, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="description"content="">
+<meta name="keywords" content="小米商城,小米手机,小米商城下载,小米商城app">
+<link rel="shortcut icon" type="image/x-icon"href="http://m.mi.com/favicon.ico"/>
+<link rel="stylesheet" href ="./miniDetail_files/miniDetail.css"/>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script>
+$(function(){
+	$("#slider").circle_x();
+	$("#swipe").circle();
+	$(".swipe-nav0-0").click(function(){
+		 var _w = $(window).width();//获取屏幕宽度
+		  var n = $(this).parent().prev().children("div").length;//轮播广告数量
+			 //点击事件
+			        var ml =  $(this).parent().prev().position().left;
+			        if(ml!=0){//上一页
+			        	ml +=_w;
+			        }
+	                $(this).parent().prev().animate({'left': ml}, 200);
+	});
+	
+	$(".swipe-nav0-1").click(function(){
+		 var _w = $(window).width();//获取屏幕宽度
+		  var n = $(this).parent().prev().children("div").length;
+			 //点击事件
+			        var ml =  $(this).parent().prev().position().left;
+	                if((ml-_w)>-(_w*n)){//下一页
+			        	ml +=-_w;
+			        }
+	                $(this).parent().prev().animate({'left': ml}, 200);
+	});
+})
+jQuery.fn.extend({
+  circle_x: function() {
+	  //展示区
+	  var _w = $(window).width();//获取屏幕宽度
+	  var n = $(this).children(".swipe-wrap").children("div").length;//轮播广告数量
+	  $(this).children(".swipe-wrap").attr("style","width:"+(_w*n)+"px");
+		 $(this).find(".swipe-wrap").children("div").each(function(){
+			 $(this).attr("style","width: "+_w+"px;");
+		 });//展示区end
+		 //触屏事件
+		 var iNow = 0, index = 1, nStartX = 0; 
+		 var oBanner = $(this)[0];
+		    oBanner.addEventListener('touchstart', function(event) {
+		        event.preventDefault();
+		        nStartX = event.targetTouches[0].pageX ;
+		    }, false);
+		    
+		    oBanner.addEventListener('touchend', function(event) {
+		        event.preventDefault();
+		        var mw = $(this).children(".swipe-wrap").children("div").width(); // 获取可视区域宽度
+		        var _l = mw + $(this).children(".swipe-wrap").position().left%mw,
+		        _w = mw/2,//滑动多少可触发事件
+		        _m = $(this).children(".swipe-wrap").children("div").length - 1;
+		        var ml = $(this).children(".swipe-wrap").position().left; //这里要重新获取left值
+		        if(_l <= _w){ //中点判断
+		            ml = ml - _l;
+		        }else{
+		            ml = ml + (mw - _l)
+		        }
+		        if(ml >= 0){
+		            ml = 0;
+		        }else if (ml <= -mw * _m){
+		            ml = -mw * _m;
+		        }
+		        $(this).children(".swipe-wrap").animate({'left': ml}, 200);
+		        var _now = parseInt(-ml/mw);
+		      $(this).children(".swipe-nav").children("span").eq(_now).addClass('on').siblings('span').removeClass('on');
+		      $(this).children(".swipe-nav").children("li").eq(_now).addClass('on').siblings('li').removeClass('on');
+		    }, false);
+		    
+		    oBanner.addEventListener('touchmove', function(event) {
+		        event.preventDefault();
+		        var touch = event.targetTouches[0];
+		        var _l = $(this).children(".swipe-wrap").position().left + touch.pageX - nStartX;
+		        nStartX = touch.pageX;
+		        $(this).children(".swipe-wrap").css('left', _l);
+		    }, false);//触屏事件end
+  },
+ circle: function() {
+	  //展示区
+	  var _w = $(window).width();//获取屏幕宽度
+	  var n = $(this).children(".swipe-wrap").children("div").length;//轮播广告数量
+	  $(this).children(".swipe-wrap").attr("style","width:"+(_w*n)+"px");
+		 $(this).find(".swipe-wrap").children("div").each(function(){
+			 $(this).attr("style","width: "+_w+"px;");
+		 });//展示区end
+  },
+});
+</script>
+</head>
+<body>
+<div class="header_03 hide" style="display: block;">
+		<div class="back"><a class="arrow" href = "mini.html">首页</a></div>
+		<div class="tit"><h3>小米Note</h3></div>
+</div>
+	<div class="viewport">
+	<!-- 展示轮播 -->
+		<div id="slider" class="swipe" style="visibility: visible;">
+			<div class="swipe-wrap" style="">
+				<div data-index="0"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/7_a1d0561.jpg">
+					</div>
+				</div>
+				<div data-index="1"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/0_d80e9a1.jpg">
+					</div>
+				</div>
+				<div data-index="2"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/1_4cd43fe.jpg">
+					</div>
+				</div>
+				<div data-index="3"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/2_ef29f6d.jpg">
+					</div>
+				</div>
+				<div data-index="4"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/3_28e5b62.jpg">
+					</div>
+				</div>
+				<div data-index="5"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/4_c636098.jpg">
+					</div>
+				</div>
+				<div data-index="6"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/5_1142de2.jpg">
+					</div>
+				</div>
+				<div data-index="7"style="">
+					<div class="imgurl">
+						<img src="./miniDetail_files/8_dcef0fd.jpg">
+					</div>
+				</div>
+			</div>
+			<div class="swipe-nav">
+				<ul>
+					<li class="on"></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+		</div>
+<!-- 展示轮播end -->
+		<div class="b b1">
+			<div class="b11"><p>小米Note</p></div>
+			<div class="b12"><p>1999元起</p></div>
+			<div>
+				<div>
+					<div class="b13">
+						<a class="button active_button"href="shopcart.html">预约全网通版</a>
+						<a class="button active_button"href="shopcart.html">购买双网通版</a>
+					</div>
+				</div>
+			</div>
+		</div>
+<!-- 	中部导航	 -->
+		<div class="b b2">
+			<div class="nav">
+				<ul>
+					<li><a class="on">概述</a></li>
+					<li><a >功能</a></li>
+					<li><a >设计</a></li>
+					<li><a>相机</a></li>
+					<li><a>HiFi</a></li>
+					<li><a>MIUI</a></li>
+					<li><a>参数</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- 	中部导航end	 -->
+		
+		<div class="b b3 list">
+			<ul>
+<!-- 			中部轮播图片 -->
+				<li><a data-stat-id="03481e0f388a3a10"></a>
+				<div class="imgurl">
+						<a ><img class="lazy"src="./miniDetail_files/0_5f6ad26.jpg"></a>
+						<div class="lnk12"><a></a><a class="lnk1" ></a></div>
+				</div>
+				<div id="swipe" class="swipe swipeb3" style="visibility: visible;">
+						<div class="swipe-wrap" style="">
+							<div data-index="0"style="">
+								<div class="imgurl">
+									<img src="./miniDetail_files/a1_886dd50.jpg">
+								</div>
+							</div>
+							<div data-index="1"style="">
+								<div class="imgurl">
+									<img src="./miniDetail_files/a2_df12925.jpg">
+								</div>
+							</div>
+							<div data-index="2"style="">
+								<div class="imgurl">
+									<img src="./miniDetail_files/a3_b2a0800.jpg">
+								</div>
+							</div>
+						</div>
+						<div class="swipe-nav0">
+							<img src="./miniDetail_files/17_841267b.png" class="swipe-nav0-0">
+							<img src="./miniDetail_files/17_841267b.png" class="swipe-nav0-1">
+						</div>
+					</div>
+				</li>
+<!-- 	中部轮播end		-->
+<!-- 广告展示 -->
+				<li>
+				     <div class="imgurl">
+						<a><img src="./miniDetail_files/images/1_611a6e9.jpg"/></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/2_a1cc342.jpg"></a>
+					</div>
+				</li>
+				<li>
+				    <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/3_8a0f3f5.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/4_23ad857.jpg"></a>
+					</div>
+				</li>
+				<li>
+				    <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/5_3ff880d.jpg"></a>
+					</div>
+				</li>
+				<li>
+				    <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/6_637351c.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/7_308dfc3.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/8_343fbb9.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/9_f48965f.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy"src="./miniDetail_files/images/10_4bc1485.jpg"></a>
+					</div>
+				</li>
+				<li>
+				     <div class="imgurl">
+						<a><img class="lazy" src="./miniDetail_files/images/11_1e2950a.jpg"></a>
+					</div>
+				</li>
+<!-- 广告展示end -->
+			</ul>
+		</div>
+		<div class="b b2 b2-1">
+			<div class="nav">
+				<ul>
+					<li><a class="on">概述</a></li>
+					<li><a>功能</a></li>
+					<li><a>设计</a></li>
+					<li><a>相机</a></li>
+					<li><a>HiFi</a></li>
+					<li><a>MIUI</a></li>
+					<li><a>参数</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="footer" class="footer hide" style="display: block;">
+		<div class="box box_03">
+			<p>©2015 m.mi.com</p>
+		</div>
+	</div>
+	<div class="loading" style="display: none;">
+		<div id="load"></div>
+	</div>
+</body>
+</html>

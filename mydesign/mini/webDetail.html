@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://www.mi.com/water/ -->
+<html lang="zh-CN" xml:lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="UTF-8">
+<title>webDetail</title>
+<link rel="shortcut icon" href="http://www.mi.com/favicon.ico"
+	type="image/x-icon">
+<link rel="icon" href="http://www.mi.com/favicon.ico"
+	type="image/x-icon">
+<link rel="stylesheet"
+	href="http://www.mi.com/css/base.min.css?2015071703">
+<script src="./webDetail_files/jquery.js"></script>
+<link rel="stylesheet" type="text/css"
+	href="./webDetail_files/overall.min.css">
+<link rel="stylesheet" type="text/css"
+	href="./webDetail_files/product-water-overall.min.css">
+</head>
+<body>
+	<div class="site-topbar">
+		<div class="container">
+			<div class="topbar-nav">
+				<a >小米网</a> <span class="sep">|</span><a
+					>MIUI</a> <span class="sep">|</span><a
+					>米聊</a> <span class="sep">|</span><a
+					>游戏</a> <span class="sep">|</span><a
+					>多看阅读</a> <span class="sep">|</span><a
+					>云服务</a> <span class="sep">|</span><a
+					>小米网移动版</a> <span class="sep">|</span><a
+					>Select region</a>
+			</div>
+			<div class="topbar-info J_userInfo">
+				<a data-needlogin="true" >登录</a> <span class="sep">|</span>
+				<a >注册</a>
+			</div>
+		</div>
+	</div>
+	<!-- .site-topbar END -->
+
+	<div class="site-header container">
+		<div class="site-logo">
+			<a class="logo"><i class="iconfont"></i></a>
+		</div>
+		<div class="header-info">
+			<div class="search-section">
+				<form id="J_searchForm" class="search-form clearfix"
+					action="http://search.mi.com/search" method="get">
+					<input class="search-text" type="search" name="keyword"
+						autocomplete="off"
+						placeholder="搜索您需要的商品"> <input type="submit"
+						class="search-btn iconfont" value="">
+					<div class="hot-words">
+						<a
+							>小米手环</a><a
+							>耳机</a><a
+							>插线板</a>
+					</div>
+					<div id="J_keywordList" class="keyword-list hide">
+						<ul class="result-list"></ul>
+					</div>
+				</form>
+			</div>
+			<div class="cart-section">
+				<a id="J_miniCart" class="mini-cart"
+					><i class="iconfont"></i>购物车<span
+					class="mini-cart-num J_cartNum" style="display: none;"></span></a>
+				<div id="J_miniCartList" class="mini-cart-list">
+					<p class="loading">数据加载中，请稍后...</p>
+				</div>
+			</div>
+		</div>
+		<div class="header-nav clearfix">
+			<div id="J_categoryContainer" class="nav-category">
+				<a class="btn-category-list">全部商品分类<i
+					class="iconfont"></i></a>
+				<div class="nav-category-section" style="display: none;">
+					<ul class="nav-category-list">
+						<li class="nav-category-item nav-category-item-first"><div
+								class="nav-category-content">
+								<a class="title" >购买手机</a>
+								<div class="links">
+									<a>小米Note</a><a>小米4</a><a>红米</a><a>红米Note</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买小米Note"><span class="text">小米Note</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买小米手机4"><span class="text">小米手机4</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买红米手机2"><span class="text">红米手机2</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买红米Note"><span class="text">红米Note</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="合约机"><span class="text">合约机</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="电信版手机"><span class="text">电信版手机</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="根据机型选配件"><span class="text">根据机型选配件</span></a></li>
+									</ul>
+									<div class="children-special-section">
+										<h4>明星配件</h4>
+										<ul>
+											<li><a>小米手环 79元</a></li>
+											<li><a>小米活塞耳机 99元</a></li>
+										</ul>
+									</div>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >购买电视与平板</a>
+								<div class="links">
+									<a>小米电视</a><a
+										>小米盒子</a><a
+										>小米平板</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买小米电视2"><span class="text">小米电视2</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买小米盒子"><span class="text">小米盒子</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="购买小米平板"><span class="text">小米平板</span></a></li>
+									</ul>
+									<div class="children-special-section">
+										<h4>明星配件</h4>
+										<ul>
+											<li><a>小米电视配件</a></li>
+											<li><a>小米盒子配件</a></li>
+											<li><a>小米平板配件</a></li>
+										</ul>
+									</div>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >路由器与智能硬件</a>
+								<div class="links">
+									<a>路由器</a><a>体重秤</a><a>净化器与滤芯</a>
+								</div>
+								<div class="nav-category-children nav-category-children-col-2">
+									<ul class="children-list">
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米路由器"><span class="text">小米路由器</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米路由器mini"><span class="text">小米路由器mini</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米手环"><span class="text">小米手环</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="摄像机"><span class="text">摄像机</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="净化器与滤芯"><span class="text">净化器与滤芯</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="运动相机"><span class="text">运动相机</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="血压计"><span class="text">血压计</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="智能插座"><span class="text">智能插座</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="体重秤"><span class="text">体重秤</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="床头灯"><span class="text">床头灯</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="随身WiFi"><span class="text">随身WiFi</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="智能家庭套装"><span class="text">智能家庭套装</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="净水器"><span class="text">净水器</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >插线板、移动电源与电池</a>
+								<div class="links">
+									<a>小米移动电源</a>
+									<a>电池</a>
+									<a>充电器</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米移动电源"><span class="text">小米移动电源</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米插线板"><span class="text">小米插线板</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="品牌移动电源"><span class="text">品牌移动电源</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="电池"><span class="text">电池</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="充电器"><span class="text">充电器</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="线材"><span class="text">线材</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >耳机音箱与存储卡</a>
+								<div class="links">
+									<a>小米头戴式耳机</a>
+									<a>小米活塞耳机</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米头戴式耳机"><span class="text">小米头戴式耳机</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米活塞耳机"><span class="text">小米活塞耳机</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米蓝牙耳机"><span class="text">小米蓝牙耳机</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="品牌耳机"><span class="text">品牌耳机</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="音箱"><span class="text">音箱</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="存储卡"><span class="text">存储卡</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title">保护套与贴膜</a>
+								<div class="links">
+									<a>保护套/保护壳</a>
+									<a>贴膜</a>
+									<a>防尘塞</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="保护套/保护壳"><span class="text">保护套/保护壳</span></a></li>
+										<li><a><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="贴膜"><span class="text">贴膜</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="防尘塞"><span class="text">防尘塞</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >后盖与个性化配件</a>
+								<div class="links">
+									<a >后盖</a><a
+										>贴纸</a><a
+										>手机支架</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="后盖"><span class="text">后盖</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="贴纸"><span class="text">贴纸</span></a></li>
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="手机支架"><span class="text">手机支架</span></a></li>
+										<li><a 
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="耳机绕线器"><span class="text">耳机绕线器</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+						<li class="nav-category-item"><div
+								class="nav-category-content">
+								<a class="title" >小米生活方式</a>
+								<div class="links">
+									<a >服装</a><a
+										>米兔</a><a
+										>背包</a><a
+										>生活周边</a>
+								</div>
+								<div class="nav-category-children">
+									<ul class="children-list">
+										<li><a ><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="服装"><span class="text">服装</span></a></li>
+										<li><a 
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="米兔"><span class="text">米兔</span></a></li>
+										<li><a 
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												data-src="http://i2.mifile.cn/a1/T1hlEvB5AT1RXrhCrK!40x40.jpg"
+												alt="背包"><span class="text">背包</span></a></li>
+										<li><a
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="小米鼠标垫"><span class="text">小米鼠标垫</span></a></li>
+										<li><a 
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="生活周边"><span class="text">生活周边</span></a></li>
+										<li><a 
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="酷玩频道"><span class="text">酷玩频道</span></a></li>
+										<li><a
+											><img
+												src="./webDetail_files/placeholder-80.png" width="40"
+												height="40"
+												alt="蓝牙手柄"><span class="text">蓝牙手柄</span></a></li>
+									</ul>
+								</div>
+							</div></li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-main">
+				<ul class="nav-main-list J_menuNavMain clearfix">
+
+
+					<li class="nav-main-item"><a
+						><span class="text">首页</span></a></li>
+
+					<li class="nav-main-item"><a 
+						><span class="text">小米手机</span><span
+							class="arrow"></span></a>
+						<div class="nav-main-children" style="">
+							<ul class="children-list clearfix">
+
+								<li class="first"><a class="item-detail"
+									> <span class="title"
+										style="font-size: 20px;">小米Note</span> <span class="desc">大屏旗舰，HiFi
+											双卡双待</span> <span class="price"><b>1999</b>元起</span> <span
+										class="thumb"> <img
+											src="./webDetail_files/nav-phone-minote.jpg"
+											alt="小米Note" width="160" height="160">
+									</span> <span class="desc">双网通16GB直降300</span>
+								</a></li>
+
+								<li><a class="item-detail" 
+									> <span class="title"
+										style="font-size: 20px;">小米手机4</span> <span class="desc">工艺和手感，超乎想象</span>
+										<span class="price"><b>1499</b>元</span> <span class="thumb">
+											<img src="./webDetail_files/nav-phone-mi4.jpg"
+											alt="小米手机4" width="160" height="160">
+									</span> <span class="desc">旗舰特价直降200</span>
+								</a></li>
+
+							</ul>
+						</div></li>
+
+					<li class="nav-main-item"><a 
+						><span class="text">红米</span><span
+							class="arrow"></span></a>
+						<div class="nav-main-children" style="">
+							<ul class="children-list clearfix">
+
+								<li class="first children-list-more"><a
+									class="item-detail J_item-detail-more"
+									> <span class="thumb">
+											<img src="./webDetail_files/nav-phone-hongmi2a-more.jpg"
+											alt="红米手机2A" width="140" height="140">
+									</span> <span class="title">红米手机2A 4G版</span> <span class="desc">4.7英寸屏
+											/ 联芯四核 / 双卡双待</span> <span class="price">无敌价：<b>499</b>元
+									</span>
+								</a></li>
+
+								<li class="children-list-more"><a
+									class="item-detail J_item-detail-more"
+									> <span class="thumb">
+											<img src="./webDetail_files/nav-phone-hongmi2-more.jpg"
+											alt="红米手机2" width="140" height="140">
+									</span> <span class="title">红米手机2 4G版</span> <span class="desc">4.7英寸屏
+											/ 64位性能 / 双卡双待</span> <span class="price"><b>599</b>元起，特惠100！</span>
+								</a></li>
+
+								<li class="children-list-more"><a
+									class="item-detail J_item-detail-more"
+									> <span class="thumb">
+											<img
+											src="./webDetail_files/nav-phone-hongminote-more.jpg"
+											alt="红米手机2" width="140" height="140">
+									</span> <span class="title">红米Note 4G版</span> <span class="desc">5.5英寸屏
+											/ 64位性能 / 双卡双待</span> <span class="price">直降100 <b>699</b>元起
+									</span>
+								</a></li>
+
+							</ul>
+						</div></li>
+
+					<li class="nav-main-item"><a
+						><span class="text">小米平板</span></a>
+					</li>
+
+					<li class="nav-main-item"><a 
+						><span class="text">小米电视</span><span
+							class="arrow"></span></a>
+						<div class="nav-main-children" style="">
+							<ul class="children-list clearfix">
+
+								<li class="first children-list-four"><a
+									> <span
+										class="thumb"> <img
+											src="./webDetail_files/nav-phone-mitv40-four.jpg"
+											alt="小米电视2 40英寸" width="155" height="90">
+									</span> <span class="title">小米电视2 40英寸</span> <span class="price"><b>1999</b>元</span>
+								</a></li>
+
+								<li class="children-list-four"><a
+									> <span
+										class="thumb"> <img
+											src="./webDetail_files/nav-phone-mitv48-four.jpg"
+											alt="小米电视2S 48英寸" width="155" height="90">
+									</span> <span class="title">小米电视2S 48英寸</span> <span class="price"><b>2999</b>元</span>
+								</a></li>
+
+								<li class="children-list-four"><a
+									> <span
+										class="thumb"> <img
+											src="./webDetail_files/nav-phone-mitv49-four.jpg"
+											alt="小米电视2 49英寸" width="155" height="90">
+									</span> <span class="title">小米电视2 49英寸</span> <span class="price"><b>3399</b>元起</span>
+								</a></li>
+
+								<li class="children-list-four"><a
+									> <span
+										class="thumb"> <img
+											src="./webDetail_files/nav-phone-mitv55-four.jpg"
+											alt="小米电视2 55英寸" width="155" height="90">
+									</span> <span class="title">小米电视2 55英寸</span> <span class="price"><b>4499</b>元起</span>
+								</a></li>
+
+							</ul>
+						</div></li>
+
+					<li class="nav-main-item"><a
+					  ><span class="text">盒子</span><span
+							class="arrow"></span></a>
+						<div class="nav-main-children" style="">
+							<ul class="children-list clearfix">
+
+								<li class="first"><a class="item-detail"
+									> <span class="title">小米盒子mini版</span>
+										<span class="desc">全球最小全高清网络机顶盒</span> <span class="price"><b>199</b>元</span>
+										<span class="thumb"> <img
+											src="./webDetail_files/nav-phone-hezimini.jpg"
+											alt="小米Note" width="160" height="160">
+									</span>
+								</a></li>
+
+								<li><a class="item-detail" 
+									> <span class="title">小米盒子
+											增强版</span> <span class="desc">首款4K超高清网络机顶盒</span> <span
+										class="price"><b>299</b>元</span> <span class="thumb"> <img
+											src="./webDetail_files/nav-hezis.jpg"
+											alt="小米Note" width="160" height="160">
+									</span>
+								</a></li>
+
+							</ul>
+						</div></li>
+
+					<li class="nav-main-item"><a 
+						><span class="text">路由器</span><span
+							class="arrow"></span></a>
+						<div class="nav-main-children" style="">
+							<ul class="children-list clearfix">
+
+								<li class="first"><a class="item-detail"> 
+								<span class="title">全新小米路由器</span>
+										<span class="desc">顶配企业级性能<br>最高内置6TB监控级硬盘
+									</span> <span class="price"><b>699</b>元起</span> <span class="thumb">
+											<img src="./webDetail_files/nav-miwifi-router.jpg"
+											alt="小米路由器" width="160" height="160">
+									</span>
+								</a></li>
+
+								<li><a class="item-detail"> <span
+										class="title">小米路由器 mini</span> <span class="desc">主流双频AC智能路由器<br>性价比之王
+									</span> <span class="price"><b>129</b>元</span> <span class="thumb">
+											<img
+											src="./webDetail_files/T1XsATBCLT1RXrhCrK!160x160.jpg"
+											alt="小米路由器 mini" width="160" height="160">
+									</span>
+								</a></li>
+
+							</ul>
+						</div></li>
+
+					<li class="nav-main-item"><a><span class="text">合约机</span></a>
+					</li>
+
+					<li class="nav-main-item"><a><span class="text">服务</span></a>
+					</li>
+
+					<li class="nav-main-item"><a><span class="text">社区</span></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="open-buy-info">
+			<a >8月4日开放购买</a>
+		</div>
+	</div>
+	<!-- .site-header END -->
+	<div class="xm-product-box">
+		<div class="hd nav-bar">
+			<div class="container">
+				<div class="title">
+					<h2>小米净水器</h2>
+				</div>
+				<div class="nav">
+					<span class="nav-switch"> 
+					    <a class="tab tab-active">概述</a><span class="separator">|</span>
+						<a class="tab">设计</a><span class="separator">|</span>
+						<a class="tab">净化原理</a><span class="separator">|</span>
+						<a class="tab">净化效果</a><span class="separator">|</span>
+						<a class="tab">智能控制</a><span class="separator">|</span>
+						<a class="tab">图集</a><span class="separator">|</span>
+						<a class="tab">规格</a><span class="separator">|</span>
+						<a class="link">一元公测</a><span class="separator">|</span>
+						<a class="link">F码通道</a><span class="separator">|</span>
+						<a class="link">常见问题</a>
+					</span> 
+					<a class="btn btn-primary btn-small">预约购买</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="bd">
+			<div id="overall" class="water-overall">
+				<div class="section section-intro">
+					<div class="container">
+						<div class="content">
+							<h1 class="title">小米净水器</h1>
+							<h2 class="subtitle">400加仑大流量，RO反渗透直出纯净水，健康家庭必备</h2>
+							<ul class="video-list clearfix">
+								<li><a class="video J_btnVideo" 
+									>出水流量视频</a></li>
+								<li><a class="video J_btnVideo"
+									>净化效果视频</a></li>
+							</ul>
+							<p class="price">
+								<span class="num">1299</span>元 <a class="address"
+									>查询配送城市
+									&gt;</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="section section-intro-sub">
+					<div class="container">
+						<div class="content">
+							<ul class="feature-list clearfix">
+								<li><i class="icon icon-feature-3"></i>RO反渗透净化技术</li>
+								<li><i class="icon icon-feature-1"></i>包装饮用水净化标准</li>
+								<li><i class="icon icon-feature-2"></i>过滤速度快8倍</li>
+								<li><i class="icon icon-feature-4"></i>实时监测TDS水质</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-stage J_fullPageSlider"
+					style="height: 3020px;">
+					<div class="page page-01 active"
+						style="position: absolute; top: 0px; z-index: 3; height: 755px;">
+						<div class="content">
+							<h3 class="title">你家里的水健康吗？</h3>
+						</div>
+						<a class="arrow J_scrollArrow" 
+							><span
+							class="ir">滑动查看下页</span></a>
+					</div>
+					<div class="page page-02"
+						style="position: absolute; top: 0px; z-index: 2; height: 755px;">
+						<div class="content">
+							<h3 class="title">
+								自来水中可能含有以下物质<br>即使将水烧开也无法去除
+							</h3>
+							<div class="stage">
+								<div class="bubble bubble-l bubble-1">重金属</div>
+								<div class="bubble bubble-l bubble-2">无机物</div>
+								<div class="bubble bubble-l bubble-3">悬浮颗粒</div>
+								<div class="bubble bubble-m bubble-4">铁锈</div>
+								<div class="bubble bubble-m bubble-5">泥沙</div>
+								<div class="bubble bubble-m bubble-6">亚硝酸盐</div>
+								<div class="bubble bubble-m bubble-7">氯化物</div>
+								<div class="bubble bubble-s bubble-8">Cd</div>
+								<div class="bubble bubble-s bubble-9">Hg</div>
+								<div class="bubble bubble-s bubble-10">Pb</div>
+								<div class="bubble bubble-s bubble-11">As</div>
+								<div class="bubble bubble-s bubble-12">Cr</div>
+							</div>
+						</div>
+						<div class="mask"></div>
+						<a class="arrow J_scrollArrow"
+							><span
+							class="ir">滑动查看下页</span></a>
+					</div>
+					<div class="page page-03"
+						style="position: absolute; z-index: 1; height: 755px; top: auto; bottom: 0px;">
+						<div class="content">
+							<h3 class="title">
+								拥有一台有效的净水器<br>已成重中之重！
+							</h3>
+							<div class="figure figure-product"></div>
+						</div>
+						<a class="arrow J_scrollArrow"
+							><span
+							class="ir">滑动查看下页</span></a>
+					</div>
+					<ol class="navigation">
+						<li class="active" style="display: none;">1</li>
+						<li style="display: none;">2</li>
+						<li style="display: none;">3</li>
+					</ol>
+				</div>
+				<div class="section section-ro">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">RO反渗透 精度最高的过滤技术</h2>
+							<h3 class="subtitle">
+								美国顶级 陶氏<span class="sep">/</span>GE 滤芯材料
+							</h3>
+							<p class="text">人们希望一打开水龙头，就能喝到干净的水，目前只有RO反透技术能做到这一点。它是目前精度最高的水过滤技术，精度达万分之一微米（0.0001μm），能去除几乎所有的细菌、抗生素，还能过滤一般净水器无法去除的重金属、水垢等。拥有4级过滤系统，层层净化，同时无罐设计还确保每滴水都不受二次污染。选用世界一流滤材供应商，最终为你输出与瓶装纯净水标准相同的饮用水。</p>
+							<a class="link" 
+								>了解净化原理
+								&gt;</a>
+							<ul class="feature-list clearfix">
+								<li class="first"><div class="data">
+										<span class="num">0.0001</span>微米
+									</div>过滤精度</li>
+								<li><div class="data">
+										<span class="num">400</span>加仑
+									</div>大通量膜片</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-efficiency">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">
+								有效去除泥沙、水垢、细菌、重金属<br>喝干净的水让身体更健康
+							</h2>
+							<ul class="feature-list clearfix">
+								<li class="first"><div class="data">细菌</div>0.4~5微米</li>
+								<li><div class="data">病毒</div>0.01~0.1微米</li>
+								<li><div class="data">抗生素</div>0.001~0.01微米</li>
+								<li><div class="data">重金属</div>0.0005~0.005微米</li>
+								<li><div class="data">无机物</div>0.0002~0.005微米</li>
+								<li><div class="data">有机物</div>分子量大于100</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-compare">
+					<div class="container">
+						<div class="content">
+							<ul
+								class="compare-list J_visibleContainer xm-visible-section-container">
+								<li class="xm-invisible-section">
+									<h3 class="title">微滤</h3>
+									<p class="text">过滤精度 0.1-1 微米</p>
+									<div class="stage stage-01">
+										<div class="bubble bubble-m bubble-1">泥沙</div>
+										<div class="bubble bubble-m bubble-2">铁锈</div>
+										<div class="bubble bubble-m bubble-3">胶体</div>
+										<div class="bubble bubble-s bubble-4">余氯</div>
+										<div class="bubble bubble-s bubble-5">颗粒</div>
+										<div class="bubble bubble-s bubble-6">虫卵</div>
+										<div class="name">一般净水器</div>
+									</div>
+								</li>
+								<li class="xm-invisible-section">
+									<h3 class="title">超滤</h3>
+									<p class="text">过滤精度 0.01-0.1 微米</p>
+									<div class="stage stage-02">
+										<div class="bubble bubble-l bubble-1">寄生虫</div>
+										<div class="bubble bubble-m bubble-2">病毒</div>
+										<div class="bubble bubble-s bubble-3">细菌</div>
+										<div class="name">一般净水器</div>
+									</div>
+								</li>
+								<li class="xm-invisible-section">
+									<h3 class="title">RO 反渗透</h3>
+									<p class="text">过滤精度 0.0001-0.001 微米</p>
+									<div class="stage stage-03">
+										<div class="bubble bubble-l bubble-1">重金属</div>
+										<div class="bubble bubble-l bubble-2">有机物</div>
+										<div class="bubble bubble-l bubble-3">无机物</div>
+										<div class="name">小米净水器</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-report">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">净化水质达瓶装纯净水标准</h2>
+							<h3 class="subtitle">通过中国疾控中心、美国 NSF 国内唯一授权机构检测</h3>
+							<p class="text">小米净水器净化水质符合《食品安全国家标准
+								包装饮用水》标准，这意味着自来水净化后，水质已与超市购买的高品质瓶装纯净水无异。通过中国疾病预防控制中心对小米净水器水质检测，其中细菌、重金属、无机物等多项物质去除率均高于行业标准。此外，美国国家卫生基金会
+								NSF 国内唯一授权检测机构也进行了检测，根据77项整机浸泡物质析出量测试，小米净水器符合全球最权威的 NSF 58 标准。</p>
+							<a class="link"
+								>了解净化效果
+								&gt;</a>
+						</div>
+						<ul class="feature-list clearfix">
+							<li><div class="data">
+									<span class="num">99.9</span>%
+								</div>细菌去除率可达</li>
+							<li><div class="data">
+									<span class="num">99.7</span>%
+								</div>有机物去除率可达</li>
+							<li><div class="data">
+									<span class="num">99.9</span>%
+								</div>重金属去除率可达</li>
+							<li><div class="data">
+									<span class="num">100</span>%
+								</div>抗生素去除率可达</li>
+						</ul>
+						<p class="tip">
+							中国疾控中心环境与健康相关产品安全所<span class="sep">/</span>广东省微生物分析检测中心检测<span
+								class="sep">/</span>中国广州分析测试中心 检测报告数据
+						</p>
+					</div>
+				</div>
+				<div class="section section-speed">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">
+								400加仑大流量出水<br>过滤速度快8倍
+							</h2>
+							<p class="text">为解决水流慢问题，一般净水器使用储水罐暂存净化水，罐体内部无法清洗，易滋生细菌，生成粘稠物，造成水源二次污染，
+							出水水质低于水质卫生安全要求。通过工程师努力研发出了无储水罐也能提升流量的净化方案。首先是改进滤芯，将传统RO反渗透滤芯内单个水路通道增加为多个通道，
+							并增大过滤面积，提升过滤效率。其次采用大流量增压泵，提供充足的水量。最终，我们将过滤效率提升8倍之多，使你打开水龙头就能喝到新鲜的纯净水。</p>
+							<a class="link" 
+								>了解净化原理
+								&gt;</a>
+							<ul class="feature-list clearfix">
+								<li class="first"><div class="data">
+										<span class="num">50</span>%
+									</div>产水率</li>
+								<li class="second"><div class="data">
+										<span class="num">1.0</span> L<span class="divider">/</span>min
+									</div>过滤速度</li>
+								<li class="third"><div class="data">
+										<span class="num">4</span>倍
+									</div>过滤面积</li>
+							</ul>
+							<p class="tip">*注：产⽔率、过滤速度会受水温、水质和水压影响。以上数据均是在水温25℃，水压0.2MPa的情况下所测试的数据。</p>
+						</div>
+					</div>
+				</div>
+				<div class="section section-speed-sub">
+					<div class="container">
+						<div class="content">
+							<ul class="feature-list clearfix">
+								<li><i class="icon icon-feature-1"></i>
+									<h3 class="title">4倍过滤面积，多通道过滤水路</h3>
+									<p class="text">
+										将传统滤芯内1片反渗透过滤膜，增加至4-5片，<br>再使用尺寸更大的膜片，充分提高了过滤效率。
+									</p></li>
+								<li><i class="icon icon-feature-2"></i>
+									<h3 class="title">大流量增压泵</h3>
+									<p class="text">
+										启停10万次，连续工作2000小时苛刻测试标准，<br>为自来水提供充足的压力通过RO反渗透膜。
+									</p></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-app">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">手机实时查看家中水质</h2>
+							<p class="text">小米净水器是一台智能净水器，它通过 WiFi
+								与手机连接，让你可以用手机实时查看家中自来水水质TDS值，以及净化后的水质情况。当滤芯需要更换，还会通过手机发送提醒。
+								不同于以往按日期粗略估算换滤芯时间，小米净水器通过水质环境，内置流量计数器及使用频率更精确计算滤芯寿命。当滤芯需要更换时，
+								还能在手机上可以一键下单购买，让你的净水器一直保持最佳状态。内置23个零部件自检功能，当出现使用问题帮助你快速解决。</p>
+							<a class="link" 
+								>了解智能功能
+								&gt;</a>
+						</div>
+						<div class="figure figure-product"></div>
+					</div>
+				</div>
+				<div class="section section-design">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">厨房美学</h2>
+							<h3 class="subtitle">摆放面积仅A4纸大小，5分钟自助安装</h3>
+							<p class="text">人们希望喝到干净的水，却往往因净水器安装复杂望而却步。解决这个问题，是我们设计净水器的出发点，
+							首先它必须小巧漂亮，符合厨房美学，其次是不能破坏装修，接上水管就能用。为了将净水器摆上台面，工程师彻底重构水路系统，减少空间浪费，
+							让其最终摆放面积比A4纸还要小，比一台电饭煲还节省空间。连接龙头及滤芯设计均采用快接式设计，从开箱到开始净水，几分钟即可完成。
+							赠送6个转接头，适配大部分家庭水龙头。</p>
+							<a class="link" 
+								>了解设计
+								&gt;</a>
+						</div>
+					</div>
+				</div>
+				<div class="section section-pen">
+					<div class="container">
+						<div class="content">
+							<h3 class="title">
+								想知道是否需要一台净水器？<br>小米水质 TDS 检测笔
+							</h3>
+							<p class="text">
+								检测家中水质纯度，帮助参考是否需要净水器。<br>通过TDS反映水中重金属离子、可溶性盐类含量。
+							</p>
+							<a class="link" 
+								>了解更多
+								&gt;</a>
+						</div>
+					</div>
+				</div>
+				<div class="section section-more">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">深入了解 小米净水器</h2>
+							<ul class="feature-list clearfix">
+								<li>
+								<a ><span class="figure figure-thumb-01"></span>设计</a></li>
+								<li>
+								<a ><span class="figure figure-thumb-02"></span>净化原理</a></li>
+								<li>
+								<a ><span class="figure figure-thumb-03"></span>净化效果</a></li>
+								<li>
+								<a><span class="figure figure-thumb-04"></span>智能控制</a></li>
+								<li>
+								<a><span class="figure figure-thumb-05"></span>规格</a></li>
+								<li>
+								<a><span class="figure figure-thumb-06"></span>图集</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section section-outro">
+					<div class="container">
+						<div class="content">
+							<h2 class="title">小米净水器</h2>
+							<p class="text">纯净水净化标准，专业RO反渗透技术</p>
+							<p class="price">
+								<span class="num">1299</span>元
+							</p>
+							<a class="btn btn-large"
+								>预约购买</a>
+							<p class="tip">
+								配送费 30元 <span class="sep">/</span> 台 <a
+									>详细规则
+									&gt;</a>
+							</p>
+							<div class="figure figure-product"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="J_modalVideo" class="modal modal-video fade hide">
+			<div class="modal-body"></div>
+			<a type="button" data-dismiss="modal" aria-hidden="true"
+				class="close" 
+				><i
+				class="iconfont"></i></a>
+		</div>
+
+		<div class="ft nav-bar">
+			<div class="container">
+				<div class="title">
+					<h2>小米净水器</h2>
+				</div>
+				<div class="nav">
+					<span class="nav-switch">
+						<a class="tab tab-active">概述</a><span class="separator">|</span>
+						<a class="tab">设计</a><span class="separator">|</span>
+						<a class="tab">净化原理</a><span class="separator">|</span>
+						<a class="tab">净化效果</a><span class="separator">|</span>
+						<a class="tab">智能控制</a><span class="separator">|</span>
+						<a class="tab">图集</a><span class="separator">|</span>
+						<a class="tab">规格</a><span class="separator">|</span>
+						<a class="link">一元公测</a><span class="separator">|</span>
+						<a class="link">F码通道</a><span class="separator">|</span>
+						<a class="link">常见问题</a>
+					</span> 
+					<a class="btn btn-primary btn-small">预约购买</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="site-footer">
+		<div class="container">
+			<div class="footer-service">
+				<ul class="list-service clearfix">
+					<li><a rel="nofollow"> <i class="iconfont"></i>
+							<strong>1小时快修服务</strong>
+					</a></li>
+					<li><a rel="nofollow"> <i class="iconfont"></i>
+							<strong>7天无理由退货</strong>
+					</a></li>
+					<li><a rel="nofollow"> <i class="iconfont"></i>
+							<strong>15天免费换货</strong>
+					</a></li>
+					<li><a rel="nofollow"> <i class="iconfont"></i>
+							<strong>满150元包邮</strong>
+					</a></li>
+					<li><a rel="nofollow"> <i class="iconfont"></i>
+							<strong>520余家售后网点</strong>
+					</a></li>
+
+				</ul>
+			</div>
+			<div class="footer-links clearfix">
+
+				<dl class="col-links col-links-first">
+					<dt>帮助中心</dt>
+					<dd>
+						<a rel="nofollow">购物指南</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">支付方式</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">配送方式</a>
+					</dd>
+
+				</dl>
+
+				<dl class="col-links ">
+					<dt>服务支持</dt>
+					<dd>
+						<a rel="nofollow">售后政策</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow" >自助服务</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">相关下载</a>
+					</dd>
+
+				</dl>
+
+				<dl class="col-links ">
+					<dt>小米之家</dt>
+					<dd>
+						<a rel="nofollow">小米之家</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">服务网点</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">预约亲临到店服务</a>
+					</dd>
+
+				</dl>
+
+				<dl class="col-links ">
+					<dt>关于小米</dt>
+					<dd>
+						<a rel="nofollow">了解小米</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">加入小米</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">联系我们</a>
+					</dd>
+
+				</dl>
+
+				<dl class="col-links ">
+					<dt>关注我们</dt>
+					<dd>
+						<a rel="nofollow">新浪微博</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow">小米部落</a>
+					</dd>
+
+					<dd>
+						<a rel="nofollow" class="J_modalWeixin">官方微信</a>
+					</dd>
+
+				</dl>
+
+				<div class="col-contact">
+					<p class="phone">400-100-5678</p>
+					<p>
+						周一至周日 8:00-18:00<br>（仅收市话费）
+					</p>
+					<a rel="nofollow" class="btn btn-primary btn-small">24小时在线客服</a>
+				</div>
+			</div>
+			<div class="footer-info clearfix">
+				<div class="info-text">
+					<p>
+						小米旗下网站：<a 
+							>小米网</a><span class="sep">|</span><a
+							>MIUI</a><span class="sep">|</span><a
+							>米聊</a><span class="sep">|</span><a
+							>多看书城</a><span class="sep">|</span><a
+							>小米路由器</a><span class="sep">|</span><a
+							>繁體香港</a><span class="sep">|</span><a
+							>繁體台灣</a><span class="sep">|</span><a
+							>English</a><span class="sep">|</span><a
+							>小米后院</a><span class="sep">|</span><a
+							>小米天猫店</a><span class="sep">|</span><a
+							>小米淘宝直营店</a><span class="sep">|</span><a
+							>小米网盟</a>
+					</p>
+					<p>
+						©<a 
+							>mi.com</a> 京ICP证110507号
+						京ICP备10046444号 京公网安备1101080212535号 <a
+							>京网文[2014]0059-0009号</a>
+					</p>
+				</div>
+				<div class="info-sites J_globalList">
+					<div class="global-site-current">简体中文</div>
+					<span class="arrow"></span>
+					<ul class="global-site-list">
+
+						<li><a>English</a></li>
+
+						<li><a>繁體台灣</a></li>
+
+						<li><a>繁體香港</a></li>
+
+						<li><a>Singapore</a></li>
+
+						<li><a>Malaysia</a></li>
+
+						<li><a>India</a></li>
+
+						<li><a>Philippines</a></li>
+
+						<li><a>Indonesia</a></li>
+
+						<li><a>Brasil</a></li>
+
+						<li><a>简体中文</a></li>
+
+					</ul>
+				</div>
+				<div class="info-links">
+					<a><img
+						src="./webDetail_files/cnnicVerifyseal.png" alt="可信网站"></a>
+					<a><img
+						src="./webDetail_files/szfwVerifyseal.gif" alt="诚信网站"></a>
+					<a><img
+						src="./webDetail_files/save.jpg" alt="网上交易保障中心"></a>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- .site-footer END -->
+	<div id="loginBox" class="modal modal-login hide" data-width="420"
+		data-width-sns="420" data-height="430">
+		<a class="close" 
+			<i class="iconfont"></i></a>
+		<div class="modal-body" id="loginBox-con">
+			<p class="loginBox-loading">数据加载中，请稍后...</p>
+		</div>
+	</div>
+	<!-- .modal-login END -->
+	<div id="J_modalWeixin" class="modal fade hide modal-weixin">
+		<div class="modal-header">
+			<a class="close" 
+				<i class="iconfont"></i></a>
+			<h3>小米手机官方微信二维码</h3>
+		</div>
+		<div class="modal-body" style="padding-top: 10px;">
+			<p style="margin: 0 0 10px;">
+				打开微信，点击右上角的“+”，选择“扫一扫”功能，<br>对准下方二维码即可。
+			</p>
+			<img alt="" src="./webDetail_files/qr.png">
+		</div>
+	</div>
+	<!-- .modal-weixin END -->
+	<div class="modal hide xm-dm-queue" id="xmDmQueue">
+		<div class="modal-body">
+			<span class="close" data-dismiss="modal" aria-hidden="true"><i
+				class="iconfont"></i></span>
+			<h3>正在排队，请稍候喔！</h3>
+			<p class="queue-tip">
+				抱歉，目前排队人数较多，导致服务器压力山大，请您耐心排队等待，<br>我们将在稍后告诉您排队结果。
+			</p>
+			<div class="queue-animate">
+				<div id="mituWalking" class="mitu-walk"></div>
+				<div class="animate-mask animate-mask-left"></div>
+				<div class="animate-mask animate-mask-right"></div>
+			</div>
+		</div>
+	</div>
+	<!-- .xm-dm-queue END -->
+	<div id="xmDmError" class="modal hide xm-dm-error">
+		<span class="close" data-dismiss="modal" aria-hidden="true"><i
+			class="iconfont"></i></span>
+		<div class="modal-body">
+			<h3>抱歉，网络拥堵无法连接服务器</h3>
+			<p class="error-tip">由于访问人数太多导致服务器压力山大，请您稍后再重试。</p>
+			<p>
+				<a class="btn btn-primary" id="xmDmReload"
+					data-stat-id="c148a4197491d5bd"
+					>重试</a>
+			</p>
+		</div>
+	</div>
+	<!-- .xm-dm-error END -->
+	<div class="modal fade hide modal-globalSites" data-width="640"
+		id="J_modal-globalSites">
+		<span class="close" data-dismiss="modal"><i class="iconfont"></i></span>
+		<div class="modal-body">
+			<h3>Welcome to Mi.com</h3>
+			<p class="modal-globalSites-tips">Please select your country or
+				region</p>
+			<p class="modal-globalSites-links clearfix">
+				        <a>Mainland China</a>
+					    <a>Hong Kong</a> 
+					    <a>Taiwan</a>
+						<a>Singapore</a>
+						<a>Malaysia</a>
+						<a>Philippines</a>
+						<a>India</a>
+						<a>Indonesia</a>
+						<a>Brasil</a>
+						<a>Global Home</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)http://m.mi.com/v2.html -->
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<link rel="stylesheet" href="./mini_files/min.css" />
+<title>my商城</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,
+	         maximum-scale=1,user-scalable=0,minimal-ui">
+<meta name="imagemode" content="force">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description">
+<meta name="keywords" content="小米商城,小米手机,小米商城下载,小米商城app">
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script>
+$(function(){
+	$("#slider").circle_x();
+	// $("#slider_nav").circle_x();
+	 $("#slider_nav").circle();
+	 
+})
+jQuery.fn.extend({
+  circle_x: function() {
+	  //展示区
+	  var _w = $(window).width();//获取屏幕宽度
+	  var n = $(this).children(".swipe-wrap").children("div").length;//轮播广告数量
+	  $(this).children(".swipe-wrap").attr("style","width:"+(_w*n)+"px");
+		 $(this).find(".swipe-wrap").children("div").each(function(){
+			 $(this).attr("style","width: "+_w+"px;");
+		 });//展示区end
+		 //触屏事件
+		 var iNow = 0, index = 1, nStartX = 0; 
+		 var oBanner = $(this)[0];
+		    oBanner.addEventListener('touchstart', function(event) {
+		        event.preventDefault();
+		        nStartX = event.targetTouches[0].pageX ;
+		    }, false);
+		    
+		    oBanner.addEventListener('touchend', function(event) {
+		        event.preventDefault();
+		        var mw = $(this).children(".swipe-wrap").children("div").width(); // 获取可视区域宽度
+		        var _l = mw + $(this).children(".swipe-wrap").position().left%mw,
+		        _w = mw/2,//滑动多少可触发事件
+		        _m = $(this).children(".swipe-wrap").children("div").length - 1;
+		        var ml = $(this).children(".swipe-wrap").position().left; //这里要重新获取left值
+		        if(_l <= _w){ //中点判断
+		            ml = ml - _l;
+		        }else{
+		            ml = ml + (mw - _l)
+		        }
+		        if(ml >= 0){
+		            ml = 0;
+		        }else if (ml <= -mw * _m){
+		            ml = -mw * _m;
+		        }
+		        $(this).children(".swipe-wrap").animate({'left': ml}, 200);
+		        var _now = parseInt(-ml/mw);
+		      $(this).children(".swipe-nav").children("span").eq(_now).addClass('on').siblings('span').removeClass('on');
+		    }, false);
+		    
+		    oBanner.addEventListener('touchmove', function(event) {
+		        event.preventDefault();
+		        var touch = event.targetTouches[0];
+		        var _l = $(this).children(".swipe-wrap").position().left + touch.pageX - nStartX;
+		        nStartX = touch.pageX;
+		        $(this).children(".swipe-wrap").css('left', _l);
+		    }, false);//触屏事件end
+  },
+  circle :function (){
+	  //展示区
+	  var _w = $(window).width();//获取屏幕宽度
+	  var n = $(this).children(".swipe-wrap").children("div").length;//轮播广告数量
+	  $(this).children(".swipe-wrap").attr("style","width:"+(_w*n)+"px");
+		 $(this).find(".swipe-wrap").children("div").each(function(){
+			 $(this).attr("style","width: "+_w+"px;");
+		 });//展示区end
+  }
+});
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="page-index" id="home" data-log="首页">
+<!-- 头 部信息-->
+			<div class="header">
+				<div class="left">
+					<a title="商城首页"class="home" href ="mini.html" ><span>商城首页</span></a>
+				</div>
+				<div class="tit">
+				</div>
+				<div class="right">
+					<ul>
+						<li class="user">
+						    <a title="个人中心" href ="ownerCenter.html">
+							<span class="icon icon-gerenzhongxin"></span></a>
+						</li>
+						<li class="cart">
+						<a title="购物车"href = "shopcart.html">
+						<span class="icon icon-gouwuche"></span></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+<!-- 头部信息end-->
+<!-- 轮播广告 -->
+			<div id="slider" class="slider card card-nomb"style="visibility: visible;">
+				<div class="swipe-wrap" style="">
+					<div data-log=""data-index="0" style="">
+						<div data-href="">
+							<span class="imgurl"><img src="./mini_files/T1Vt_jBmCT1RXrhCrK.jpg"></span>
+						</div>
+					</div>
+					<div data-log=""data-index="1"style="">
+						<div data-href="">
+							<span class="imgurl"><img src="./mini_files/T1johgBvxT1RXrhCrK.jpg"></span>
+						</div>
+					</div>
+					<div data-log=""data-index="2"style="">
+						<div data-href="">
+							<span class="imgurl"><img src="./mini_files/T1QLDvBTJ_1RXrhCrK.jpg"></span>
+						</div>
+					</div>
+					<div data-log=""data-index="3"style="">
+						<div data-href="">
+							<span class="imgurl"><img src="./mini_files/T1oeWgB_WT1RXrhCrK.jpg"></span>
+						</div>
+					</div>
+					<div data-log=""data-index="4"style="">
+						<div data-href="">
+							<span class="imgurl"><img src="./mini_files/T1eXKvBCCv1RXrhCrK.jpg"></span>
+						</div>
+					</div>
+				</div>
+				<div class="swipe-nav">
+					<span class="on">&nbsp;</span>
+					<span class="">&nbsp;</span>
+					<span class="">&nbsp;</span>
+					<span class="">&nbsp;</span>
+					<span class="">&nbsp;</span>
+				</div>
+			</div>
+<!-- 轮播广告end -->
+<!-- 中间导航 -->
+			<div class="nav-wrap nav-index">
+				<div id="slider_nav" class="swipe"style="visibility: visible;">
+					<div class="swipe-wrap "  style="width: 2846px;" >
+						<div data-index="0" style="">
+							<ul>
+								<li><a href = "allCategory.html">
+									<span class="icon icon-quanbushangpin"></span>
+									<span class="t"><span>全部商品</span></span></a>
+								</li>
+								<li><a href = "search.html">
+									<span class="icon icon-sousuo"></span>
+									<span class="t"><span>搜索</span></span></a>
+								</li>
+								<li><a>
+									<span class="icon icon-shequ"></span>
+									<span class="t"><span>小米社区</span></span></a>
+								</li>
+								<li><a>
+									<span class="icon icon-kehuduan"></span>
+									<span class="t"><span>客户端</span></span></a>
+								</li>
+							</ul>
+						</div>
+						<div data-index="1"style="">
+							<ul>
+								<li><a>
+									<span class="icon icon-heyueji"></span>
+									<span class="t"><span>合约机</span></span></a>
+								</li>
+								<li><a>
+									<span class="icon icon-fcode"></span>
+									<span class="t"><span>F码频道</span></span></a>
+								</li>
+								<li><a>
+									<span class="icon icon-huafeichongzhi"></span>
+									<span class="t"><span>话费充值</span></span></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 中间导航end-->
+			<div class="title">
+				<span>现货购买</span>
+			</div>
+<!--内容左1右2 -->
+			<div class="card show_big">
+				<div class="col2">
+					<div class="row2 mg-bor-right">
+						<a class="img" href = "miniDetail.html">
+							<span class="imgurl">
+							<img src="./mini_files/T1MpAvB5Vv1RXrhCrK.jpg"></span></a>
+					</div>
+					<div class="rows">
+						<div class="row1">
+							<a class="img" href ="webDetail.html">
+								<span class="imgurl">
+								<img src="./mini_files/T1rBA_BgVT1RXrhCrK.jpg"></span></a>
+						</div>
+						<div class="row1 mg-bor-no-left mg-bor-top">
+							<a class="img">
+								<span class="imgurl">
+								<img src="./mini_files/T1hoKvB5xv1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 内容左1右2end -->
+<!-- 左右对称 -->
+			<div class="card show_big show_big2">
+				<div>
+					<div class="col2">
+						<div class="row1 mg-bor-right">
+							<a class="img">
+								<span class="imgurl">
+								<img src="./mini_files/T1MUD_B_KT1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+						<div class="row1 mg-bor-right">
+							<a class="img">
+								<span class="imgurl">
+								<img src="./mini_files/T1FLLTBXDv1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col2">
+						<div class="row1 mg-bor-right">
+							<a class="img">
+							<span class="imgurl">
+							<img src="./mini_files/T1ZvCTBbYT1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+						<div class="row1 mg-bor-right">
+							<a class="img">
+								<span class="imgurl">
+								<img src="./mini_files/T1srLTBCxv1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col2">
+						<div class="row1 mg-bor-right">
+							<a class="img">
+							<span class="imgurl">
+							<img src="./mini_files/T1auVTB7Kv1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+						<div class="row1 mg-bor-right">
+							<a class="img" >
+								<span class="imgurl">
+								<img src="./mini_files/T1Mx_TBbDT1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+					</div>
+					<div class="col2">
+						<div class="row1 mg-bor-right">
+							<a class="img">
+							<span class="imgurl">
+							<img src="./mini_files/T1lKDgBKxT1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+						<div class="row1 mg-bor-right">
+							<a class="img" >
+								<span class="imgurl">
+								<img src="./mini_files/T1hhY_BmKT1RXrhCrK.jpg"></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 左右对称end -->
+<!-- 智能硬件list -->
+			<div class="list">
+				<div class="head">
+					<span>智能硬件</span>
+				</div>
+				<div class="list-cell">
+					<div class="row">
+						<div class="cell">
+							<a >
+								<span class="imgurl"><img src="./mini_files/T1gwb_BT_T1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米盒子mini版</span></span>
+								<span class="p"><span>199元</span> <del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a >
+								<span class="imgurl"><img src="./mini_files/T1x9h_BTdT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米路由器Mini</span></span>
+								<span class="p"><span>129元</span> <del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a >
+								<span class="imgurl"><img src="./mini_files/T1XYxTBsAT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米空气净化器 包邮</span></span>
+								<span class="p"><span>899元</span><del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1PxJvBCAT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米智能插座</span></span>
+								<span class="p"><span>59元</span><del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a >
+								<span class="imgurl"><img src="./mini_files/T1ATY_BvLT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米体重秤</span></span>
+								<span class="p"><span>99元</span> <del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T10Zd_BbZT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小蚁运动相机</span></span>
+								<span class="p"><span>399元</span> <del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1YI__BCWT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>iHealth智能血压计</span></span>
+								<span class="p"><span>199元</span><del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl">
+								<img src="./mini_files/T1fnDgBTxT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小蚁智能摄像机</span></span>
+								<span class="p"><span>129元起</span> <del></del></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+<!-- 热卖推荐list -->
+			<div class="list">
+				<div class="head">
+					<span>热卖推荐</span>
+				</div>
+				<div class="list-cell">
+					<div class="row">
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T19OV_BgKT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米水质TDS检测笔</span></span>
+								<span class="p"><span>39元</span><del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1jcEgB4AT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米插线板</span></span>
+								<span class="p"><span>49元</span><del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1f.CvByDv1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米移动电源</span></span>
+								<span class="p"><span>49元起</span> <del></del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1ojW_BTYT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米活塞耳机</span></span>
+								<span class="p"><span>49元</span> <del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1omEQB4dT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米随身风扇</span></span>
+								<span class="p"><span>14.9元</span><del>19.9元</del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1fXETByJT1RXrhCrK.jpg"></span>
+								<span class="p"><span>小米随身WIFI</span></span>
+								<span class="p"><span>19.9元</span> <del></del></span>
+							</a>
+						</div>
+					</div>
+					<div class="row">
+						<div class="cell">
+							<a>
+								<span class="imgurl"><img src="./mini_files/T1gCJgB_dT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小钢炮蓝牙音箱</span></span>
+								<span class="p"><span>109元</span><del>129元</del></span>
+							</a>
+						</div>
+						<div class="cell">
+							<a data-log="E1-1151500040">
+								<span class="imgurl"><img src="./mini_files/T18hYgB4DT1RXrhCrK!300x300.jpg"></span>
+								<span class="p"><span>小米自拍杆</span></span>
+								<span class="p"><span>39元</span><del>49元</del></span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+<!--商品listend-->
+			<div class="col1 more">
+				<a ><span>查看更多配件&nbsp;&gt;</span>
+				</a>
+			</div>
+			<div class="footer">
+				<div class="tip">
+					<a class="goDesktop"><span>切换到电脑版</span></a>
+				</div>
+				<div class="links">
+					<a><span class="linksBtn">立即下载</span>
+					<p><strong>小米商城客户端</strong><span>传说中的抢机神器</span></p></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -86,7 +86,16 @@
 							style="float: right;margin-top: 6px;"><img style="width:15px;" src="images/down.jpg"/></span></div>
 							<div class="leftlinks" style="display:none">
 							<a href="./mydesign/echarts-example/test1.html"> echarts</a>
-							<a href="#"> 百度Map</a>
+							<a href="./mydesign/baidu-map/test1.html"> 百度Map</a>
+							
+							</div>
+							<div style="height:32px;cursor:pointer;" class="cat-head"onclick="showDetail(this)">
+							<span 
+							style="font-size: 19px;line-height: 35px;color:yellow;">wab-app</span><span 
+							style="float: right;margin-top: 6px;"><img style="width:15px;" src="images/down.jpg"/></span></div>
+							<div class="leftlinks" style="display:none">
+							<a href="./mydesign/echarts-example/test1.html">h5+css3</a>
+							<a href="./mydesign/baidu-map/test1.html">bootstrap</a>
 							
 							</div>
 						</div>

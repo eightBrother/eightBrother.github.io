@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<title>订单确认</title>
+<meta name="viewport"
+	content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0,minimal-ui">
+<meta name="imagemode" content="force">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta name="description"content="">
+<meta name="keywords" content="小米商城,小米手机,小米商城下载,小米商城app">
+<link rel="shortcut icon" type="image/x-icon"href="http://m.mi.com/favicon.ico">
+<link rel="apple-touch-icon-precomposed"href="http://img01.mifile.cn/m/app/touch-icon.png">
+<link rel ="styleSheet" href = "./orderConfirm1_files/orderConfirm1.css"/>
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script>
+    $(function(){
+    	$(".address").click(function(){
+    		window.location.href = "address.html";
+    	});
+    	
+    })
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div class="page-order-checkout" data-log="提交订单">
+			<div class="header">
+				<div class="left">
+					<a  title="小米商城"class="home" href = "mini.html">
+						<span class="icon-home"></span>
+					</a>
+				</div>
+				<div class="tit">
+					<h2 data-log="HEAD-标题-提交订单">
+						<span class="title">提交订单</span>
+					</h2>
+				</div>
+				<div class="right">
+					<ul>
+						<li class="cart">
+							<a title="购物车" href = "shopcart.html">
+							<span class="icon icon-gouwuche"></span><span class="tip">2</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="address">
+				<ul>
+					<li class="item edit">
+					  <div class="p"><span>添加地址</span></div>
+					</li>
+				</ul>
+			</div>
+			<div class="sepa"></div>
+			<div class="t1">
+				<div class="item">
+					<div class="head">
+						<span class="tit">支付方式</span><span class="val">在线支付</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="head">
+						<span class="tit">配送方式</span><span class="val">快递配送（免运费）</span>
+					</div>
+				</div>
+				<div class="item">
+					<div class="head">
+						<span class="tit">送货时间</span><span class="val">不限送货时间</span>
+						<div class="edit"><span>修改</span></div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="head">
+						<span class="tit">发票信息</span><span class="val">个人发票</span>
+						<div class="edit"><span>修改</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="sepa"></div>
+			<div class="t2">
+				<div class="item">
+					<div class="head"><span class="tit">使用优惠券</span></div>
+				</div>
+				<div class="item">
+					<div class="head"><span class="tit">商品清单：共2件商品</span></div>
+				</div>
+			</div>
+			<div class="sepa"></div>
+			<div class="satt">
+				<div class="pt">
+					<span>商品金额合计</span><span class="right">3135元</span>
+				</div>
+				<div class="pt">
+					<span>运费</span><span class="right">0元</span>
+				</div>
+				<div class="pt hot">
+					<span>订单金额</span><span class="right">3135元</span>
+				</div>
+				<div class="btn">
+					<a class="xm-button" href = "pay.html"><span>去结算</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="info"></div>
+	<div class="gmu-media-detect" id="gmu-media-detect0"></div>
+</body>
+</html>

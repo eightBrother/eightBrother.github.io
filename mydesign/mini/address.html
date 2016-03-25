@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="author" content="xiaomi">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+<meta name="format-detection" content="telephone=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon-precomposed"
+	href="http://img01.mifile.cn/m/app/touch-icon.png">
+<link rel="shortcut icon" href="http://m.mi.com/favicon.ico"
+	type="image/x-icon">
+<meta name="description"
+	content="">
+<meta name="keywords" content="小米商城,小米手机,小米商城下载,小米商城app">
+<link rel="stylesheet" type="text/css"
+	href="./address_files/xmapp_b17276b.css">
+<script src="../js/jquery-1.8.2.min.js"></script>
+<script src = "./address_files/area.js"></script>
+<script>
+$(function(){
+	_init_area();
+});
+
+</script>
+<title>个人地址</title>
+</head>
+<body style="display: block; background: rgb(235, 236, 237);">
+	<div id="Cheader" style="">
+		<div id="header" class="header_03">
+			<div class="back">
+				<a  class="arrow" href="mini.html">首页</a>
+			</div>
+			<div class="tit" style=""><h3>新增地址</h3></div>
+			<div class="nav">
+				<ul>
+					<li class="cart">
+					<a href= "shopcart.html">购物车</a>
+					<span id="ShoppingCartNum" style="">2</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="wrapper" class="xm_app">
+		<div id="viewport" class="viewport" style="background: transparent;">
+			<div class="address_add mlr20 ">
+				<div class="box box_01">
+					<div class="title">
+						<h3>收货人姓名</h3>
+					</div>
+					<div class="input">
+						<input type="text" placeholder="请填写真实姓名" id="consignee"
+							maxlength="15">
+					</div>
+				</div>
+				<div class="box box_02">
+					<div class="title">
+						<h3>收货地址</h3>
+					</div>
+					<div class="box_02_01 h_box">
+						<div class="flex_1" style="display: none">
+							<div data-type="select" class="select">
+								<select id="country_id">
+									<option value="1">中国</option>
+								</select>
+							</div>
+						</div>
+						<div class="flex_1">
+							<div class="select">
+								<div  class="option">请选择省</div>
+								<select id="province_id"></select>
+							</div>
+						</div>
+						<div class="flex_1">
+							<div  class="select">
+								<div  class="option">请选择市</div>
+								<select id="city_id"></select>
+							</div>
+						</div>
+					</div>
+					<div class="box_02_02">
+						<div  class="select">
+							<div  class="option">请选择区</div>
+							<select id="district_id"></select>
+						</div>
+					</div>
+					<div class="box_02_03">
+						<div class="textarea">
+							<textarea placeholder="路名或街道地址，门牌号，不少于10个字" id="address"maxlength="120"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="box box_03">
+					<div class="title">
+						<h3>邮政编码</h3>
+					</div>
+					<div class="input">
+						<input placeholder="邮政编码,为6位数字" id="zipcode" type="tel"maxlength="6">
+					</div>
+				</div>
+				<div class="box box_04">
+					<div class="title">
+						<h3>手机号码</h3>
+					</div>
+					<div class="input">
+						<input placeholder="联系人电话，11位数字" id="tel" type="tel"maxlength="11">
+					</div>
+				</div>
+				<div class="box box_05">
+					<a id="AddressAddBtn"class="button active_button" href = "pay.html">确认完成</a>
+				</div>
+			</div>
+			<div id="footer" class="footer">
+				<div class="tip">
+					<a class="goDesktop"><span>切换到电脑版</span></a>
+				</div>
+				<div class="links">
+					<a>
+						<span class="linksBtn">立即下载</span>
+						<p><strong>小米商城客户端</strong><span>传说中的抢机神器</span></p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="mask" class="mask hide"></div>
+</body>
+</html>
