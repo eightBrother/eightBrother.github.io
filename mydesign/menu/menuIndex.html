@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost:8080/JMCC/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache"> 
+<title>金融通统一互联平台</title>
+<link href="./index-style.css" type="text/css" rel="stylesheet">
+<link href="./tabstyle.css" rel="stylesheet">
+<script type="text/javascript" src="./alertWindow.js"></script>
+<script src="./jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="./iframe.js" type="text/javascript"></script>
+<script src="./ligerui.all.js" type="text/javascript"></script>
+<script src="./index.js" type="text/javascript"></script>
+<script type="text/javascript" src="./common.js"></script>
+<script>
+var tab = null;
+var accordion = null;
+//存放二级菜单的Array 用于判断当前二级菜单是否加载过三级菜单
+var list = null;
+var flag_init = 0; //0没有初始化左侧节点，1已初始化左侧节点
+var userIframId; //用户中心的iframe的ID;
+var userIframeId_navLi;//导航用户的id;
+var navData;//导航数据
+var t;
+var fristNav = "";
+var userid;
+var setIndexCounter = 0;
+var timeLength; //退出时的时间
+var everyTime;
+var mainPage;
+//给Array增加方法in_array 判断Array中是否包含某个元素
+Array.prototype.S=String.fromCharCode(2);
+Array.prototype.in_array=function(e){
+	var r = new RegExp(this.S+e+this.S);
+	return (r.test(this.S+this.join(this.S)+this.S));
+}
+$(function(){
+	
+	queryMenuTree(0,null,null);
+	
+	
+})
+	
+//动态添加菜单的方法 
+function queryMenuTree(pid,twoText,threeText) {
+	//添加导航栏
+	var data =[{ description: "基础（横向菜单）" ,helpUrl: "",id: 5,imageIndex: "",isMenu: 1,
+	moduleCode: "2-",moduleName: "基础",navigateUrl: "#",parentId: 0,roleDefault: 0,
+userDefault: 0	}] ;
+
+  $.each(data, function(i, item) {
+					if(flag_init == 0){
+						flag_init = 1;
+						fristNav = item.moduleName;
+						$("#selectMenu").append('<h2 class="selectMenu"><a href="#">'+fristNav+'</a></h2>');
+						$("#nav ul").append(
+									'<li value="'+item.id+'" class="active"><img src="images/index_img/menu_active.png" /><a href="#" id="'+item.id+'" onclick="menuClick(this)">'+ item.moduleName + '</a></li>'
+						);
+					//	queryMenuTree(item.id,null,null);
+					}else{	
+						$("#nav ul").append(
+									'<li value="'+item.id+'"><img src="images/index_img/menu_active.png" /><a href="#" id="'+item.id+'" onclick="menuClick(this)">'+ item.moduleName + '</a></li>');
+					}
+				});
+				//生成2级菜单
+	var  data1 = [{description: "",helpUrl: "",id: 51,imageIndex: "",isMenu: 1,moduleCode: "2-1-"
+,moduleName: "户主",navigateUrl: "aa.html",parentId: 5,roleDefault: 0,userDefault: 0},
+{description: ""
+,helpUrl: ""
+,id: 52
+,imageIndex: ""
+,isMenu: 1
+,moduleCode: "2-3-"
+,moduleName: "账户"
+,navigateUrl: ""
+,parentId: 5
+,roleDefault: 0
+,userDefault: 0 },
+	{
+	description: ""
+,helpUrl: ""
+,id: 53
+,imageIndex: ""
+,isMenu: 1
+,moduleCode: "2-3-1"
+,moduleName: "本币实账户"
+,navigateUrl: "bb.html"
+,parentId: 52
+,roleDefault: 0
+,userDefault: 0
+	}
+]	;
+	list = new Array();
+           $.each(data1, function(i, item) {
+					if(item.parentId==5){
+						if(item.navigateUrl== null || $.trim(item.navigateUrl)==''){
+							
+							$("#level_one").append('<li><p><a href="#" id="'+item.id+'" title="'+item.moduleName+'">'
+									+ item.moduleName + '</a></p><div class="liOn"><img src="images/index_img/menuSelect.png" /></div></li>');
+						}else{
+							$("#level_one").append('<li><p><a href="javascript:f_addTab(\'a'+item.id+'\',\''+item.moduleName+'\',\''+item.navigateUrl+'\')" id="'+item.id+'" title="'+item.moduleName+'">'
+									+ item.moduleName + '</a></p><div class="liOn"><img src="images/index_img/menuSelect.png" /></div></li>');
+						}
+					}else{
+						if(list.in_array(item.parentId)){
+							if(item.navigateUrl== null || $.trim(item.navigateUrl)==''){
+								$("#"+item.parentId).parent().parent().find("ul").append(
+										'<li><a href="#" id="'+item.id+'" title="'+item.moduleName+'">'
+												+ item.moduleName + '</a></li>');
+							}else{
+							
+								if(item.navigateUrl=="page/shop/online_purchase.html"){
+									$("#"+item.parentId).parent().parent().find("ul").append(
+											'<li><a href="page/newShop/index.html" id="'+item.id+'" title="'+item.moduleName+'" target="_blank">'
+													+ item.moduleName + '</a></li>');
+								}else{
+									$("#"+item.parentId).parent().parent().find("ul").append(
+											'<li><a href="javascript:f_addTab(\'a'+item.id+'\',\''+item.moduleName+'\',\''+item.navigateUrl+'\')" id="'+item.id+'" title="'+item.moduleName+'">'
+													+ item.moduleName + '</a></li>');
+								}
+								
+							}
+						}else{
+							list.push(item.parentId);
+							$("#"+item.parentId).parent().parent().append("<ul class='level_two clear'></ul>");
+							
+							if(item.navigateUrl== null || $.trim(item.navigateUrl)==''){
+								$("#"+item.parentId).parent().parent().find("ul").append(
+										'<li><a href="#" id="'+item.id+'" title="'+item.moduleName+'">'
+												+ item.moduleName + '</a></li>');
+							}else{
+								if(item.navigateUrl=="page/shop/online_purchase.html"){
+									$("#"+item.parentId).parent().parent().find("ul").append(
+											'<li><a href="page/newShop/index.html" id="'+item.id+'" title="'+item.moduleName+'" target="_blank">'
+													+ item.moduleName + '</a></li>');
+								}else{
+									$("#"+item.parentId).parent().parent().find("ul").append(
+											'<li><a href="javascript:f_addTab(\'a'+item.id+'\',\''+item.moduleName+'\',\''+item.navigateUrl+'\')" id="'+item.id+'" title="'+item.moduleName+'">'
+													+ item.moduleName + '</a></li>');
+								}
+							
+							}
+						}
+							
+					}
+						
+				});
+				var aLi_one = $("#level_one>li");
+					for(var i=0;i<aLi_one.length;i++){
+				if(aLi_one.eq(i).find(".level_two").length == 0){
+					aLi_one.eq(i).find("a").css("backgroundImage","none")	
+				}
+			}
+			oneTwoClick();
+
+}
+ //生成嵌套的iframe
+ function f_addTab(tabid,text, url){
+	 $("#framecenter").ligerTab();
+	tab = $("#framecenter").ligerGetTabManager();
+	//alert(tab);
+	//if(!check_session($("#username").html()))return;
+	if($(".l-tab-links li").length>=10){
+		$(".l-tab-links li:eq(0)").find(".l-tab-links-item-close").click();
+	}
+	tab.addTabItem({ tabid : tabid,text: text, url: url });
+	tab.reload(tabid);
+	$(".l-tab-links li").click(function(){
+		$(".l-tab-links li").css("background-position","0px 2px");
+		$(this).next().css("background-position","-20px 2px");
+	})
+	$(".l-tab-links").find("ul li.l-selected").find(".l-tab-links-item-close").click(function(){
+		var screenW = parent.window.$("body").width();
+		var screenH = parent.window.$("body").height();
+		var nowIframe = $(this).parent().attr("tabid");
+		$(window.frames[nowIframe]).find("#common_fullScreen_btn").text("全屏");
+		
+		$(".l-tab-links").find("ul li").show();
+		$("#head").show();
+		$("#nav").show();
+		$("#content_left").show();
+		$("#btn_setting").show();
+		
+		//$("#content_right").width(screenW*0.85-245);
+		$("#content_right").width($("#head").width()-$("#content_left").width()-25);
+		$("#content_right").find("iframe").height(550);
+	})
+	$(".l-tab-links").find("ul li").click(function(){
+		var tabid = $(this).attr("tabid");
+		tab.reload(tabid);
+	})
+	
+} 
+
+
+function oneTwoClick(){
+	var aLi_one = $("#level_one>li");
+	for(var i=0;i<aLi_one.length;i++){
+		if(aLi_one.eq(i).find(".level_two").length == 0){
+			aLi_one.eq(i).find("a").css("backgroundImage","none");	
+		}
+	}
+	aLi_one.click(function (event){
+		aLi_one.not(":eq($(this).index())").find(".level_two").slideUp();
+		var aUl_two = $(this).find(".level_two");
+		aLi_one.removeClass("on1");
+		aLi_one.removeClass("on2");
+		if(aUl_two.is(':visible')){
+			
+			aUl_two.slideUp();
+		}else{
+			//aLi_one.removeClass("on1");
+			//aLi_one.removeClass("on2");
+			if($(this).find(".level_two").length == 0){
+				$(this).addClass("on2");
+			}else{
+				$(this).addClass("on1");
+			}
+			aUl_two.slideDown();
+		}
+		
+		event.stopPropagation();	
+		
+	});
+	
+	var aLi_two = $(".level_two li");
+	aLi_two.click(function (event){
+		aLi_two.css("fontWeight","normal");
+		$(this).css("fontWeight","bold");			
+		event.stopPropagation();
+	});
+	var aLi_two_a = $(".level_two a");
+	aLi_two_a.hover(function (){
+		if(aLi_two_a)
+		aLi_two_a.css("fontWeight","normal");
+		$(this).css("fontWeight","bold")			
+	},function(){
+		aLi_two_a.css("fontWeight","normal");
+	});
+}
+
+</script>
+<style>
+#message_div a:hover{text-decoration:underline;}
+#message_div a{color:blue;}
+</style>
+</head>
+<body  class="index_box" id="indexBImg"> 
+<input id ="userName" type="hidden" name = "userName"/>
+<font id ="username" class="hide"></font>
+<div class="">
+	<div class="skin_container" id="skin_container">
+    	<ul class="maxW clear">
+    		<li class="skinOn"><img src="images/index_img/thumbnail/0.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+        	<li><img src="images/index_img/thumbnail/1.jpg" /><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/2.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/3.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/4.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/5.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/6.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+            <li><img src="images/index_img/thumbnail/7.jpg"/><span><img src="images/index_img/xuanzhong.png"/></span></li>
+        </ul>
+    </div>
+    <div class="body_bg" id="body_bg"></div>
+	<div id="head" class="head maxW">
+    	<a href="../../myDesign.html" id="logo"style="font-size:26px">个人作品</a>
+    	<div class="head_right fr">
+	    	<div class="head_right_top">
+	    		<span class="logout" onclick="logout()">退出</span>
+	    	</div>       
+	        <div class="head_right_bottom">
+	            <div class="site pr">
+	            	<a id="messageA" class="messageA" href="javascript:void(0);">
+		                <span class="message" id="messageImg"></span>
+		                <p class="messageNum" id="messagealert"></p>
+		                <p>消息提醒</p>
+	                </a>
+	                <div id="message_div" class="pa" style="display:none;left:10px;top:20px;z-index:200;border:1px solid #ccc;background:#fff;padding:10px;min-width:100px;">
+	                	<li oneT='查看' twoT='我的任务' threeT='待处理作业'><a href="javascript:void(0);">内部待审批：<font id="spNum" color='#ff0000'></font></a></li>
+	                	<li oneT='交易融资' twoT='协同作业' threeT='待协同作业' ><a href="javascript:void(0);">供应链待协同：<font id="gyNum" color='#ff0000'></font></a></li>
+	                	<li oneT='交易融资' twoT='协同作业' threeT='邀请协同作业' ><a href="javascript:void(0);">供应链邀请协同：<font id="ivNum" color='#ff0000'></font></a></li>
+	                	<li oneT='查看' twoT='流动性' threeT='流动性预警' ><a href="javascript:void(0);">流动性预警：<font id="yjNum" color='#ff0000'></font></a></li>
+	                </div>
+	            </div>
+	            <!--
+	            <div class="site">
+	                <span class="searchInput">
+	                    <input type="text"/>
+	                </span>
+	                <span class="search"></span>
+	            </div>
+	             
+	            <div class="site">
+	                <span class="time"></span>
+	                <p>登录时间：</p><font id = "time"></font>
+	            </div>
+	             -->
+	            <div class="site">
+	                <span class="user"></span>
+	                <p>欢迎您, <a class="userNameA" id="userNameA" href ="javascript:void(0);" target =""><font id = "usernameFont"></font></a></p>
+	            </div>
+	            
+	        </div>
+        </div>
+    </div>
+    <div class="menu maxW " id="nav">
+    	<ul class="clear fl" >
+        	
+        </ul>
+        <div class="font_size fr">
+        	<!-- <span class="size_small" id="size_small"></span>
+            <span class="size_big" id="size_big"></span> -->
+            <span class="background" id="background"></span>
+        </div>
+    </div>   
+    <div class="content maxW  clear" id="layout1">
+    	
+    	<div class="open" id="open">展开二级导航</div>
+    	<div class="clear">
+    	<div id="content_left" class="content_left fl" position="left">
+        	<div class="contract" id="contract"></div>
+            <div class="content_left_menu">
+                <ul class="level_one clear" id="level_one">
+                	<div id="selectMenu">
+                	
+                	</div>
+                    <!-- <h2 class="selectMenu">
+                    	<a href="#" id="selectA">系统</a>
+                    </h2> -->
+                </ul>
+            </div>
+        </div>                   
+        <div id="content_right" style="overflow:hidden;"  class="content_right fl">
+        	<div class="iframe_box">
+                <div position="center" id="framecenter" class=""> 
+                    
+                </div> 
+        	</div>
+        	<!-- 
+        	<div id="help">
+        		<h3>提示信息:</h3>
+        		<div></div>
+        	</div> 
+        	-->
+        </div>
+        </div>
+    </div>
+    <div class="i_foot maxW">
+    	<p>联多科技&nbsp;&nbsp;版权所有&nbsp;&nbsp;||&nbsp;&nbsp;客服电话：96655  ||  版本号:201407100900 V1.0</p>
+		<a href ="./mydesign/menu.rar">源码下载</a>
+    </div>
+</div>
+</body></html>
