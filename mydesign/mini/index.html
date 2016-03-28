@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <script charset='utf-8' type='text/javascript' src='./jquery-1.4.2.js'></script>
+   <script src="./jquery.qrcode.min.js" type="text/javascript"></script>
+     <script type="text/javascript">
+         $(document).ready(function(){
+           $('#qr_gen').click(function() 
+           {
+			   if($('#qr_container').is(":empty")){
+			   	  $('#qr_container').qrcode({render:"canvas",height:120, width:120,correctLevel:0,text:$('#qr_link').val()}); 
+
+			   }else{
+			    	$('#qr_container').empty();
+			   }
+                        });
+         });
+         </script>
+ </head>
+ <body>
+  <h1>扫描二维码，浏览手机版</h1>
+         <div>
+             <label for="qr_link">URL:</label>      
+             <input id="qr_link" type="text" value="http://eightBrother.github.io/mydesign/mini/login.html" style="width:450px;" readonly/> 
+             <button id="qr_gen" value="Generate">点击生成二维码</button> <br />
+         </div>
+         <div id="qr_container" style="margin:auto; position:relative;"></div>
+         </div>
+ </body>
+</html>

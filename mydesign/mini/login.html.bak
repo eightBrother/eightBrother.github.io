@@ -9,13 +9,13 @@
 	content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <link rel="stylesheet" href= "./login_files/login.css"/>
 	 <script>
-	   document.getElementById("submit").onclick=function(){
-		   var name =  document.getElementById("name").value;
+	 
+	   function login(){
+	   	      var name =  document.getElementById("name").value;
 		   var psw = document.getElementById("psw").value;
 	   	  if(name=="哈哈"&&psw =="123456"){
-		   window.open("./mini.html");
+		  location.href="mini.html";
 		  }
-	     
 	   }
 	 </script>
 <title>帐号 - 登录</title>
@@ -45,7 +45,7 @@
 								<input type="password" id="psw"value="123456" class="enter-item last-enter-item"autocomplete="off" placeholder="密码"/> 
 							</div>
 						</div>
-						<input class="button orange" id="submit" type="submit" value="立即登录">
+						<input class="button orange" onclick="login()" type="submit" value="立即登录">
 						<div class="ng-foot clearfix">
 							<div class="ng-link-area">
 								 <span> <a>QQ联合登录</a><span>|</span></span> 
