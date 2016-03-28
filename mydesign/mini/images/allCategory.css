@@ -3,98 +3,126 @@ body,h1,h2,h3,p,dl,dd,ol,ul,th,td,form,fieldset,input,button,textarea {
 	margin: 0;
 	padding: 0
 }
+
 html {
 	-webkit-text-size-adjust: none;
 	word-wrap: break-word
 }
+
 h1,h2,h3 {
 	font-size: 100%
 }
+
 ol,ul {
 	list-style: none
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 	empty-cells: show;
 	font-size: inherit
 }
+
 fieldset,img {
 	border: 0
 }
+
 cite,em,s,i,b {
 	font-style: normal
 }
+
 input,button,textarea,select {
 	font-size: 100%
 }
+
 body,input,button,textarea,select,option {
 	font-size: normal
 }
+
 a,input,textarea {
 	text-decoration: none;
 	outline: 0
 }
+
 li,img,label,input {
 	vertical-align: middle
 }
-.var {
+
+var {
 	font-style: normal
 }
+
 ins {
 	text-decoration: none
 }
+
 body {
 	font-size: 20px
 }
+
 .viewport {
 	max-width: 720px;
 	margin: auto;
 	overflow: hidden
 }
+
 .mlr20 {
 	margin: auto 1em
 }
+
 .m20 {
 	margin: 1em 0
 }
+
 .m30 {
 	margin: 1.5em 0
 }
+
 .mt20 {
 	margin-top: 1em
 }
+
 .mb20 {
 	margin-bottom: 1em
 }
+
 .mt40 {
 	margin-top: 2em
 }
+
 .mb40 {
 	margin-bottom: 2em
 }
+
 .mt-20 {
 	margin-top: -1em
 }
+
 .hide {
 	display: none
 }
+
 .h_box {
 	display: -webkit-box;
 	display: box;
 	width: 100%
 }
+
 .h_box .spacer {
 	width: 1em
 }
+
 .flex_1 {
 	-webkit-box-flex: 1;
 	box-flex: 1;
 	width: 100%
 }
+
 .flex_20 {
 	width: 1em
 }
+
 .imgurl {
 	display: block;
 	background: #fff
@@ -107,9 +135,11 @@ body {
 	background-size: 40% auto;
 	width: 100%
 }
+
 .imgurl img {
 	width: 100%
 }
+
 @media only screen and (max-width:300px) {
 	body {
 		font-size: 8.33333px
@@ -118,6 +148,7 @@ body {
 		max-width: 300px
 	}
 }
+
 @media only screen and (max-width:310px) and (min-width:300px) {
 	body {
 		font-size: 8.33333px
@@ -126,6 +157,7 @@ body {
 		max-width: 310px
 	}
 }
+
 @media only screen and (max-width:320px) and (min-width:310px) {
 	body {
 		font-size: 8.61111px
@@ -134,6 +166,7 @@ body {
 		max-width: 320px
 	}
 }
+
 @media only screen and (max-width:350px) and (min-width:320px) {
 	body {
 		font-size: 8.88889px
@@ -142,6 +175,7 @@ body {
 		max-width: 350px
 	}
 }
+
 @media only screen and (max-width:360px) and (min-width:350px) {
 	body {
 		font-size: 9.72222px
@@ -150,6 +184,7 @@ body {
 		max-width: 360px
 	}
 }
+
 @media only screen and (max-width:400px) and (min-width:360px) {
 	body {
 		font-size: 10px
@@ -158,6 +193,7 @@ body {
 		max-width: 400px
 	}
 }
+
 @media only screen and (max-width:470px) and (min-width:400px) {
 	body {
 		font-size: 11.11111px
@@ -166,6 +202,7 @@ body {
 		max-width: 470px
 	}
 }
+
 @media only screen and (max-width:480px) and (min-width:470px) {
 	body {
 		font-size: 13.05556px
@@ -174,6 +211,7 @@ body {
 		max-width: 480px
 	}
 }
+
 @media only screen and (max-width:540px) and (min-width:480px) {
 	body {
 		font-size: 13.33333px
@@ -182,6 +220,7 @@ body {
 		max-width: 540px
 	}
 }
+
 @media only screen and (max-width:560px) and (min-width:540px) {
 	body {
 		font-size: 15px
@@ -190,6 +229,7 @@ body {
 		max-width: 560px
 	}
 }
+
 @media only screen and (max-width:570px) and (min-width:560px) {
 	body {
 		font-size: 15.55556px
@@ -198,6 +238,7 @@ body {
 		max-width: 570px
 	}
 }
+
 @media only screen and (max-width:630px) and (min-width:570px) {
 	body {
 		font-size: 15.83333px
@@ -206,6 +247,7 @@ body {
 		max-width: 630px
 	}
 }
+
 @media only screen and (max-width:640px) and (min-width:630px) {
 	body {
 		font-size: 17.5px
@@ -214,6 +256,7 @@ body {
 		max-width: 640px
 	}
 }
+
 @media only screen and (max-width:710px) and (min-width:640px) {
 	body {
 		font-size: 17.77778px
@@ -222,6 +265,7 @@ body {
 		max-width: 710px
 	}
 }
+
 @media only screen and (max-width:720px) and (min-width:710px) {
 	body {
 		font-size: 19.72222px
@@ -230,6 +274,7 @@ body {
 		max-width: 720px
 	}
 }
+
 @media only screen and (min-width:720px) {
 	body {
 		font-size: 20px
@@ -238,6 +283,7 @@ body {
 		width: 720px
 	}
 }
+
 @font-face {
 	font-family: iconfont;
 	src: url(/static/fonts/iconfont_2337a86.eot?9owfml);
@@ -249,6 +295,7 @@ body {
 	font-weight: 400;
 	font-style: normal
 }
+
 [class^=icon-],[class*=" icon-"],.iconfont {
 	font-family: iconfont !important;
 	speak: none;
@@ -260,64 +307,84 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale
 }
+
 .icon-xingxing:before {
 	content: "\e600"
 }
+
 .icon-gouwuche:before {
 	content: "\e606"
 }
+
 .icon-gerenzhongxin:before {
 	content: "\e605"
 }
+
 .icon-home:before {
 	content: "\e607"
 }
+
 .icon-fangdajing:before {
 	content: "\e604"
 }
+
 .icon-shanchu:before {
 	content: "\e60b"
 }
+
 .icon-checked:before {
 	content: "\e602"
 }
+
 .icon-diannaoban:before {
 	content: "\e603"
 }
+
 .icon-huafeichongzhi:before {
 	content: "\e608"
 }
+
 .icon-kehuduan:before {
 	content: "\e609"
 }
+
 .icon-quanbushangpin:before {
 	content: "\e60a"
 }
+
 .icon-shequ:before {
 	content: "\e60c"
 }
+
 .icon-sousuo:before {
 	content: "\e60d"
 }
+
 .icon-tehui:before {
 	content: "\e60e"
 }
+
 .icon-xiaomishouji:before {
 	content: "\e60f"
 }
+
 .icon-heyueji:before {
 	content: "\e611"
 }
+
 .icon-fcode:before {
 	content: "\e601"
 }
+
 .icon-fuwu:before {
 	content: "\e610"
 }
+
 .form-input {
 	border: 1px solid #ccc;
 	overflow: hidden
 }
+
 .form-input>input {
 	border: 0;
 	width: 100%;
@@ -325,34 +392,42 @@ body {
 	padding: .78571em;
 	color: #333
 }
+
 .form-input>input::-webkit-input-placeholder {
 	color: #ccc
 }
+
 html,body,#wrapper {
 	height: 100%
 }
+
 body {
 	background-color: #f4f4f4
 }
+
 .global-loading {
 	position: absolute;
 	top: 7.5em;
 	width: 100%;
 	text-align: center
 }
+
 .global-loading .global-loading-logo .global-loading-anim {
 	height: 7.5em
 }
+
 .global-loading .global-loading-text {
 	font-size: 1.2em;
 	line-height: 1.5em;
 	color: #333
 }
+
 .global-loading .global-loading-text .hot {
 	font-weight: 700;
 	font-size: 1.16667em;
 	padding: 0 .25em
 }
+
 .v-enter {
 	position: absolute;
 	top: 0;
@@ -363,6 +438,7 @@ body {
 	-webkit-animation: fadein .2s;
 	animation: fadein .2s
 }
+
 .v-leave {
 	position: absolute;
 	top: 0;
@@ -554,6 +630,7 @@ keyframes fadeout { 0%{
 .xm-button-gray span {
 	color: #666
 }
+
 .gmu-media-detect {
 	-webkit-transition: width 0.001ms;
 	width: 0;
@@ -566,12 +643,14 @@ keyframes fadeout { 0%{
 		width: 100px;
 	}
 }
+
 #info {
 	position: fixed;
 	top: 0;
 	width: 100%;
 	text-align: center
 }
+
 .header {
 	position: relative;
 	background-color: #f4f4f4;
@@ -665,6 +744,7 @@ keyframes fadeout { 0%{
 	-o-border-radius: .3em;
 	border-radius: .3em
 }
+
 .footer .tip {
 	text-align: center;
 	padding: 2.3em 0
@@ -728,6 +808,7 @@ keyframes fadeout { 0%{
 	color: #626262;
 	line-height: 2em
 }
+
 .page-index .nav-wrap .swipe {
 	position: relative;
 	visibility: hidden;
@@ -826,8 +907,8 @@ keyframes fadeout { 0%{
 	-o-border-radius: .8em;
 	border-radius: .8em;
 	background: #FFF;
-	filter: alpha(Opacity = 60);/* 	不透明级别（ie8以前）*/
-	opacity: .6;/* 	不透明级别*/
+	filter: alpha(Opacity = 60);
+	opacity: .6;
 	box-shadow: 0 0 1px #ccc
 }
 
@@ -1121,6 +1202,7 @@ keyframes fadeout { 0%{
 	font-size: 1.6em;
 	color: #999
 }
+
 .tips_view {
 	text-align: center;
 	background-color: #f4f4f4;
@@ -1130,7 +1212,7 @@ keyframes fadeout { 0%{
 	right: 0;
 	margin-top: -5.85em
 }
- 
+
 .tips_view .tips_msg {
 	padding: 5em 0 2em
 }
@@ -1149,4 +1231,155 @@ keyframes fadeout { 0%{
 
 .tips_view .tips_btn a {
 	color: #333
+}
+
+.page-category {
+	background: #FFF
+}
+
+.page-category .category_child {
+	display: none
+}
+
+.page-category .category_child.on {
+	display: block
+}
+
+.page-category .category_search {
+	padding: .5em 1.6em
+}
+
+.page-category .category_search .input-word {
+	padding: 1.4em 4em 1.1em 1em
+}
+
+.page-category .category_search .input-word input {
+	font-size: 1.5em;
+	border: 0 none;
+	color: #666;
+	width: 100%
+}
+
+.page-category .category_search .input-word .btn {
+	position: absolute;
+	right: .5em;
+	top: .3em;
+	width: 3.4em;
+	height: 3.4em;
+	background:
+		url(/static/views/product/category/img/pro_searchbtn_15d54d1.png) 0 0
+		no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-ms-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover
+}
+
+.page-category .category_search form {
+	display: block;
+	position: relative
+}
+
+.page-category .category_search form:after {
+	content: '\0020';
+	display: block;
+	width: 100%;
+	height: .4em;
+	border: .15em solid #ccc;
+	border-top: 0 none;
+	position: absolute;
+	bottom: 0;
+	left: 0
+}
+
+.page-category .list_category {
+	text-align: center;
+	padding: 0 1.7em;
+	min-height: 5em
+}
+
+.page-category .list_category .category {
+	background: #FFF;
+	overflow: hidden;
+	border-bottom: .15em solid #eee;
+	position: relative
+}
+
+.page-category .list_category .category a {
+	display: block
+}
+
+.page-category .list_category .category a:after {
+	content: '\0020';
+	clear: both;
+	display: block
+}
+
+.page-category .list_category .category .imgurl {
+	float: left;
+	width: 4em;
+	height: 4em;
+	margin-top: 1em;
+	overflow: hidden;
+	background-color: #fff
+}
+
+.page-category .list_category .category .name {
+	float: left;
+	font-size: 1.35em;
+	margin: 1.48148em 0;
+	padding-left: .74074em;
+	font-weight: 700;
+	color: #333
+}
+
+.page-category .list_category .js-more:after {
+	content: '\0020';
+	display: block;
+	width: 1em;
+	height: 1em;
+	border-top: .2em solid #ccc;
+	border-right: .2em solid #ccc;
+	position: absolute;
+	top: 2.2em;
+	right: .9em;
+	-webkit-transition: .2s ease;
+	-webkit-transition-delay: 0s;
+	-moz-transition: .2s ease;
+	-o-transition: .2s ease;
+	transition: .2s ease;
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	transform: rotate(45deg)
+}
+
+.page-category .category_child li {
+	margin-left: 2.2em
+}
+
+.page-category .category_child .category {
+	border-bottom-style: dotted
+}
+
+.page-category .category_child .category a {
+	height: 4.5em
+}
+
+.page-category .category_child .category .name {
+	font-size: 1.35em;
+	margin: 1.18519em 0;
+	padding-left: 1.33333em;
+	color: #999
+}
+
+.page-category .category_child li:last-child {
+	margin-left: 0
+}
+
+.page-category .category_child li:last-child .category {
+	padding-left: 2.2em;
+	border-bottom-style: solid
 }
