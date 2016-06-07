@@ -9,30 +9,49 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/styles.css" type="text/css" media="all">
 <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
 <script type="text/javascript" src="js/atooltip.jquery.js"></script>
 <script type="text/javascript" src="js/kwicks-1.5.1.pack.js"></script>
 <script type="text/javascript" src="js/script.js"></script>
-<!--[if lt IE 9]>
-<script type="text/javascript" src="js/html5.js"></script>
-<style type="text/css">
-	#ContactForm .bg div, #ContactForm .bg {behavior:url(js/PIE.htc)}
-</style>
-<![endif]-->
-<!--[if lt IE 7]>
-<div style=' clear: both; text-align:center; position: relative;'>
-	<a href="http://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="http://www.theie6countdown.com/images/upgrade.jpg" border="0" alt="" /></a>
-</div>
-<![endif]-->
 </head>
 <body id="page1">
+<div class="page" style="position: absolute;top: -80px;right: 0px;">
+    <br><br><br><br>
+    <section class="demo">
+        <div id="myAudio" style="margin:0 auto;">
+			<audio autoplay="autoplay">
+                <source title="Nightwish-Deep Silent Complete.mp3" src="music/Nightwish-Deep Silent Complete.mp3" />
+                <source title="Nightwish-Elvenpath.mp3" src="music/Nightwish-Elvenpath.mp3" />
+                <source title="Nightwish-Ever Dream.mp3" src="music/Nightwish-Ever Dream.mp3" />
+                <source title="Nightwish-Passion And The Opera.mp3" src="music/Nightwish-Passion And The Opera.mp3" />
+                <source title="Nightwish-Sacrament Of Wilderness.mp3" src="music/Nightwish-Sacrament Of Wilderness.mp3" />
+                <source title="Nightwish-Sleeping Sun.mp3" src="music/Nightwish-Sleeping Sun.mp3" />
+                <source title="Nightwish-While Your Lips Are Still Red.mp3" src="music/Nightwish-While Your Lips Are Still Red.mp3" />
+                <source title="Nightwish-I Want My Tears Back.mp3" src="music/Nightwish-I Want My Tears Back.mp3" />
+                <source title="Nightwish-Amaranth (Single Version).mp3" src="music/Nightwish-Amaranth (Single Version).mp3" />
+			</audio>
+		</div>
+		<script type="text/javascript" src="js/AudioPlayer.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#myAudio").initAudio();
+			});
+		</script>
+    </section>
+
+</div>
+
+
 <div class="body1">
+
 	<div class="body2">
 		<div class="main">
 <!-- header -->
 			<header>
 				<h1><a href="index.html" id="logo">eightBrother个人博客</a></h1>
 			</header>
+            
 			<div class="ic">More Website Templates  at TemplateMonster.com!</div>
 <!-- / header -->
 <!-- content -->

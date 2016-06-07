@@ -12,7 +12,13 @@ body {background:url(../images/bg.jpg) repeat;border:0;font:14px Arial, Helvetic
 /* Global Structure */
 .main {margin:0 auto;width:80%}
 body, html {height:100%}
-.body1 {background:url(../images/bg_top.jpg) top repeat-x;height:100%;min-height:745px}
+.body1 {background:url(../images/bg_top.jpg) top repeat-x;height:100%;min-height:745px} 
+@media only screen and(min-width:350px) and (max-width:750px){
+	.body2 {background:url(../images/bg_img1.png) top center no-repeat;height:100%;min-height:745px}
+	}
+	@media only screen and (min-width:750px) and (max-width:1024px){
+		.body2 {background:url(../images/bg_img.jpg) top center no-repeat;height:100%;min-height:745px}
+		}
 .body2 {background:url(../images/bg_img.jpg) top center no-repeat;height:100%;min-height:745px}
 /*  main layout  */
 a {color:#558f0b;text-decoration:underline;outline:none}
