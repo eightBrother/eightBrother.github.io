@@ -3,7 +3,7 @@
 .fright  {float:right}
 .fcenter {float:none;margin:0 auto;text-align:center}
 .fclear {clear:both}
-body {margin:0;font-size:13px;font-family:arial;color:#3F3F3F;background:#CBCBC6}
+body {margin:0;font-size:13px;font-family:arial;color:#3F3F3F;}
 .outer {width:100%;background:#fff}
 .name {font-size:35px;color:#9B0033;padding-left:15px;height:70px}
 .name2 {color:#3F3F3F}
