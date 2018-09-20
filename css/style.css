@@ -33,7 +33,7 @@ header {height:266px;width:100%;overflow:hidden}
 #menu li a{}
 #menu li a:hover, #menu #menu_active a {}
 /*  content  */
-#content {height:372px;width:100%;overflow:hidden;background:#fff;position:relative}
+#content {width:100%;overflow:hidden;background:#fff;position:relative}
 .cont_top_left, .cont_top_right, .cont_bot_left, .cont_bot_right {display:block;width:20px;height:20px;position:absolute;z-index:11}
 .cont_top_left {top:0;left:0;background:url(../images/content_top_left.gif) top left no-repeat}
 .cont_top_right {top:0;right:0;background:url(../images/content_top_right.gif) top right no-repeat}

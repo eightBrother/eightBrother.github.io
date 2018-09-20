@@ -6,75 +6,341 @@
 <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/layout.css" type="text/css" media="all">
 <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-<link href="./css/detail_style.css" rel="stylesheet" type="text/css" />
+<link href="css/detail_style.css" rel="stylesheet" type="text/css" />
+<!-- Theme CSS -->  
+<link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
 <script type="text/javascript" src="js/jquery-1.5.2.js" ></script>
-<script type="text/javascript" src="js/atooltip.jquery.js"></script>
-<script type="text/javascript" src="js/kwicks-1.5.1.pack.js"></script>
-<script type="text/javascript" src="js/script.js"></script>
-
 <style>
-#left {
-    float: left;
-    width: 200px;
-	background: none;
-    border: none;
-}
-p {
-    padding-bottom: 7px;
-}
+#left {float: left;width: 200px;background: none;border: none;}
+p {padding-bottom: 7px;}
+#content{    background: #f5f5f5;}
 </style>
 </head>
 <body id="page1">
 <div class="body1">
 	<div class="body2">
 		<div class="main">
-<!-- header -->
 			<header>
 				<h1><a href="index.html" id="logo">eightBrother个人博客</a></h1>
 			</header>
-			<div class="ic">More Website Templates  at TemplateMonster.com!</div>
-<!-- / header -->
-<!-- content -->
-			<section id="content" style="height: 461px;width: 980px;overflow:auto;">
-<div  class="outer">
-<div>
-			<div class="inner_copy"></div>
-			<div style=" width:923px;">
-					<div  id="left">
-						<div >
-							<div style="cursor:pointer;">
-							<img style="border-radius: 500px;width: 218px; height: 218px;"
-							src="images/page1_img1.jpg" alt=""></div>								
-						</div>
-						<div>
-						<p>王志超&nbsp;&nbsp;&nbsp;男</p>
-						<p>未婚</p>
-						<p>身高&nbsp;&nbsp;&nbsp;170cm</p>
-						<p>体重&nbsp;&nbsp;&nbsp;60kg</p>
-						</div>
-					</div>
-				
+			<section id="content" style="width: 900px;overflow:auto;">
+               <div class="header">
+	                <div class="top-bar container-fluid"></div>
+					<div class="intro">
+						<div class="container text-center">
+							<img class="profile-image" src="images/page1_img1.jpg" alt="">
+							<h2 class="name">java工程师</h2>
+							<div class="title">王志超</div>
+							<div class="profile">
+								<p>Profile info goes here. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.</p>
+							</div><!--//profile-->
+						</div><!--//container-->
+					</div><!--//intro-->
+			   </div><!--//header-->
 
-					<div style="width: 699px;height: 450px;border: 1px solid #E2E2E2;
-    float: left; margin-left: 20px; margin-top: 5px;border-radius: 15px;">
-							<iframe id ="detail"src="personalindex.html" style="width:100%;height:100%">
-							 
-							</iframe>
-					</div>
-				
-			</div>
-</div>
+<div class="wrapper container">
+	<section id="experiences-section" class="experiences-section section">
+		<h2 class="section-title">工作经历</h2>
+		<div class="timeline">
+			<div class="item">
+				<div class="work-place">
+					<h3 class="place">Google</h3>
+					<div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>Mountain View</div>
+				</div>
+				<div class="job-meta">
+					<div class="title">Senior Software Engineer</div>
+					<div class="time">2017/3 - 至今</div>
+				</div><!--//job-meta-->
+				<div class="job-desc">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p> 
+					<ul>
+						<li>Lorem ipsum dolor sit amet</li>
+						<li>Donec pede justo ante</li>
+						<li>Maecenas tempus tellus eget </li>
+					</ul>
+				</div><!--//job-desc-->
+			</div><!--//item-->
+			
+			<div class="item">
+				<div class="work-place">
+					<h3 class="place">Apple</h3>
+					<div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>New York</div>
+				</div>
+				<div class="job-meta">
+					<div class="title">Lead Software Engineer</div>
+					<div class="time">2014/6 - 2017/3</div>
+				</div><!--//job-meta-->
+				<div class="job-desc">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p> 
+				</div><!--//job-desc-->
+			</div><!--//item-->
+			
+			<div class="item">
+				<div class="work-place">
+					<h3 class="place">Startup Hub</h3>
+					<div class="location"><i class="fa fa-map-marker" aria-hidden="true"></i>London</div>
+				</div>
+				<div class="job-meta">
+					<div class="title">Founder &amp; Lead Developer</div>
+					<div class="time">2012/6 - 2014/6</div>
+				</div><!--//job-meta-->
+				<div class="job-desc">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.</p> 
+				</div><!--//job-desc-->
+			</div><!--//item-->
+			
+		</div><!--//timeline-->
+		
+	</section><!--//section-->
 	
-</div>
+	<section id="eudcation-section" class="education-section section">
+		<h2 class="section-title">教育经历</h2>
+		<div class="row">
+			<div class="item col-xs-12 col-sm-4">
+				<div class="item-inner">
+					<h3 class="degree">MSc Computer Science</h3>
+					<div class="education-body">
+						University College of London
+					</div><!--//education-body-->
+					<div class="time">2008/9 - 2012/6</div>
+					<div class="desc">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient 
+					</div>
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			
+			
+		</div><!--//row-->
+	</section><!--//section-->
+	
+	
+	<section id="skills-section" class="skills-section section text-center">
+		<h2 class="section-title">专业技能</h2>
+		<div class="top-skills">
+			<h3 class="subtitle">主要技能</h3>
+			<div class="row">
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<div class="chart-easy-pie text-center">
+							<div class="chart-theme-1 chart" data-percent="98"><span>98</span>%</div>
+						</div>
+						<h4 class="skill-name">Python &amp; Django</h4>
+						<div class="level">Expert, 8 years</div>
+						<div class="desc">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient 
+						</div>
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<div class="chart-easy-pie text-center">
+							<div class="chart-theme-1 chart" data-percent="90"><span>90</span>%</div>
+						</div>
+						<h4 class="skill-name">JavaScript</h4>
+						<div class="level">Expert, 8 years</div>
+						<div class="desc">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient 
+						</div>
+					</div><!--//item-inner-->
+				</div><!--//item-->
+				<div class="item col-xs-12 col-sm-4">
+					<div class="item-inner">
+						<div class="chart-easy-pie text-center">
+							<div class="chart-theme-1 chart" data-percent="85"><span>85</span>%</div>
+						</div>
+						<h4 class="skill-name">React &amp; Angular</h4>
+						<div class="level">Advanced, 4 years</div>
+						<div class="desc">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient 
+						</div>
+					</div><!--//item-inner-->
+				</div><!--//item-->
+			</div><!--//row-->
+		</div><!--//top-skills-->
+		
+		<div class="other-skills">
+			<h3 class="subtitle">其他技能</h3>
+			<div class="misc-skills">
+				<span class="skill-tag">HTML5</span>
+				<span class="skill-tag">CSS3</span>
+				<span class="skill-tag">SASS</span>
+				<span class="skill-tag">LESS</span>
+				<span class="skill-tag">Git</span>
+				<br>
+				<span class="skill-tag">Ruby</span>
+				<span class="skill-tag">PHP</span>
+				<span class="skill-tag">Wireframe</span>
+				<span class="skill-tag">Spanish</span>
+				<span class="skill-tag">French</span>
+			</div>
+		</div><!--//other-skills-->
+		
+	</section><!--//skills-section-->
+	
+	
+	<section id="portfolio-section" class="portfolio-section section">
+		<h2 class="section-title">代表作品</h2>
+		<ul id="filters" class="filters clearfix">
+			<li class="type active" data-filter="*">All</li>
+			<li class="type" data-filter=".backend">Back-end</li>
+			<li class="type" data-filter=".frontend">Front-end</li>
+		</ul><!--//filters-->
+		<div class="items-wrapper isotope row">
+			<div class="item backend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-1.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">AngularJS</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item backend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-2.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">Django</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item backend frontend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-3.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">Django/JavaScript</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item frontend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-4.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">ReactJS</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item backend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-5.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">Python</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			<div class="item backend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-6.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">JavaScript</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			
+			<div class="item frontend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-7.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">HTML/AngularJS</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			
+			<div class="item frontend backend col-md-3 col-xs-6 " style="position: relative;left: 0px;top: 0px;padding-left: 15px;padding-right: 15px;width: 240px;float: left;">
+				<div class="item-inner">
+					<figure class="figure">
+						<img class="img-responsive" style="width:100%" src="assets/images/portfolio/portfolio-8.jpg" alt="" />
+					</figure>
+					<div class="content text-left">
+						<h3 class="sub-title"><a href="#">Project Lorem Ipsum</a></h3>
+						<div class="meta">Python/AngularJS</div>
+						<div class="action"><a href="#">View on Github</a></div>
+					</div><!--//content-->    
+					<a class="link-mask" href="#"></a>              
+				</div><!--//item-inner-->
+			</div><!--//item-->
+			
+		</div><!--//item-wrapper-->
+		
+	</section><!--//section-->
+	
+	<section id="contact-section" class="contact-section section">
+		<h2 class="section-title">联系方式</h2>
+		<div class="intro">
+			<img class="profile-image" src="images/page1_img1.jpg" alt="">
+			<div class="dialog">
+				<p>I'm currently taking on freelance work. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+				<p><strong>I can help with the following:</strong></p>
+				<ul class="list-unstyled service-list">
+					<li><i class="fa fa-check" aria-hidden="true"></i> App development with ReactJS</li>
+					<li><i class="fa fa-check" aria-hidden="true"></i> Front-end development with AngularJS</li>
+					<li><i class="fa fa-check" aria-hidden="true"></i> Back-end development with Django/Python</li>
+					<li><i class="fa fa-check" aria-hidden="true"></i> UI development</li>
+					<li><i class="fa fa-check" aria-hidden="true"></i> UX prototyping</li>
+				</ul>
+				<p>Drop me a line at <a href="mailto:someone@example.com">james.doe@website.com</a> or call me at <a href="tel:01234567890">0123 456 7890</a></p>
+				<ul class="social list-inline">
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-skype" aria-hidden="true"></i></a></li>
+				</ul><!--//social-->
+			</div><!--//diaplog-->
+		</div><!--//intro-->
+
+	</section><!--//section-->
+	
+</div><!--//wrapper-->
+
+<!-- Javascript -->          
+<script type="text/javascript" src="assets/plugins/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+<script type="text/javascript" src="assets/plugins/jquery-scrollTo/jquery.scrollTo.min.js"></script> 
+<script type="text/javascript" src="assets/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+<script type="text/javascript" src="assets/plugins/imagesloaded.pkgd.min.js"></script> 
+<script type="text/javascript" src="assets/plugins/isotope.pkgd.min.js"></script>  
+
+<!-- custom js -->
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
+<script src="assets/js/demo/style-switcher.js"></script>     
 
 			</section>
-<!-- / content -->
-<!-- footer -->
-			<footer>
-				  
-			
-			</footer>
-<!-- / footer -->
 		</div>
 	</div>
 </div>

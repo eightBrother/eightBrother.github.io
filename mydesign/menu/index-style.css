@@ -17,9 +17,9 @@ li{list-style:none;}
 .xubox_yes:focus { -outline:red dashed 1px; -background-color:#f00;} 
 .xubox_no:focus { -outline:red dashed 1px; -background-color:#f00;}
 /* public */
-.maxW{width:85%;min-width:1100px; margin:0 auto;}
+.maxW{width:85%;margin:0 auto;}
 .maxWLogo{width:1100px;margin:0 auto;}
-.maxW{width:85%;min-width:1100px; margin:0 auto;}
+.maxW{width:85%; margin:0 auto;}
 .fl{float:left;}
 .fr{float:right;}
 .pr{position:relative}
